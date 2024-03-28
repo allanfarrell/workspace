@@ -1,0 +1,45 @@
+/* toggle-switch.component.css */
+.toggle-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+  }
+  
+  .toggle-input {
+    display: none; /* Hide the actual checkbox input */
+  }
+  
+  .toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: lightslategrey;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  
+  .toggle-slider:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  /* Adjust styling when the toggle is checked (active) */
+  .toggle-input:checked + .toggle-slider {
+    background-color: lightslategrey;
+  }
+  
+  .toggle-input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+  }
+  

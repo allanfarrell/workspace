@@ -1,0 +1,12 @@
+.tab-header {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  .tab-header div {
+    cursor: pointer;
+    padding: 0.4em 1em;
+  }
+  .tab-header div.active {
+    border-bottom: 2px solid lightsteelblue;
+  }

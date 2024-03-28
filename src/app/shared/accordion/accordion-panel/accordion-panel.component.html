@@ -1,0 +1,8 @@
+<div class="panel" [class.active]="isActive">
+    <div class="panel-header" (click)="togglePanel()">
+      <ng-content select="[panel-title]"></ng-content>
+    </div>
+    <div class="panel-content" *ngIf="isActive">
+      <ng-content select="[panel-content]"></ng-content>
+    </div>
+  </div>

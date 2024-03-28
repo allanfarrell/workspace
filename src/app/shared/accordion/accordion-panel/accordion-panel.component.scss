@@ -1,0 +1,28 @@
+.accordion {
+    width: 100%;
+  }
+  
+  /* accordion-panel.component.css */
+  .panel {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .panel.active {
+    border: 1px solid #3498db;
+  }
+  
+  .panel-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+  }
+  
+  .panel-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  .panel.active .panel-content {
+    display: block;
+  }
