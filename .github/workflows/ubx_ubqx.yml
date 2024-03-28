@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
+          
+      - name: Change directory
+        run: cd ubx/proto
 
       - name: npm install, build, and test
         run: |
