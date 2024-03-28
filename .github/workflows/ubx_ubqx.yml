@@ -65,7 +65,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'ubqx'
+          app-name: 'proto'
           slot-name: 'Production'
           package: .
           
