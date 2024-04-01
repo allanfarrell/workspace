@@ -7,6 +7,7 @@
     <div class="row btn-row-container">
         <mat-icon routerLink="/dashboard" matTooltip="Info about the action">dashboard</mat-icon>
         <mat-icon routerLink="/search">search</mat-icon>
+        <mat-icon routerLink="/tenant" matTooltip="Configuration">tune</mat-icon>
         <mat-icon routerLink="/account" matTooltip="Account">account_circle</mat-icon>
         <mat-icon routerLink="/notifications" matTooltip="Notifications">notifications</mat-icon>
         <mat-icon routerLink="/support">help_outline</mat-icon>
@@ -23,12 +24,6 @@
 
     <div *ngIf="selectedMenu == 'default'">
         <hr />
-        <div class="row btn-row-container" routerLink="/account">
-            <label class="menu-item">Account</label>
-        </div>
-        <div class="row btn-row-container">
-            <label class="menu-item" routerLink="/tenant">Organisation</label>
-        </div>
         <div class="row btn-row-container" routerLink="/instrument">
             <label class="menu-item">Instruments</label>
         </div>
@@ -40,9 +35,6 @@
         </div>
         <div class="row btn-row-container">
             <label class="menu-item" routerLink="">Analytics</label>
-        </div>
-        <div class="row btn-row-container">
-            <label class="menu-item" routerLink="/support">Support</label>
         </div>
     </div>
 
