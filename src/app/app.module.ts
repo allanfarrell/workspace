@@ -16,6 +16,7 @@ import { IntegrationsComponent } from './features/tenant/integrations/integratio
 import { CommunicationComponent } from './features/tenant/communication/communication.component';
 import { ReferenceDataComponent } from './features/tenant/reference-data/reference-data.component';
 import { ProductsComponent } from './features/tenant/products/products.component';
+import { OperationsModule } from './features/operations/operations.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ProductsComponent } from './features/tenant/products/products.component
     NotificationsModule,
     AccountModule,
     InstrumentModule,
+    OperationsModule,
     SupportModule,
     SharedModule,
     MatIconModule

@@ -16,6 +16,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionPanelComponent } from './accordion/accordion-panel/accordion-panel.component';
 import { SearchboxComponent } from './searchbox/searchbox.component';
 import { TableComponent } from './table/table.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TableComponent } from './table/table.component';
     AccordionComponent,
     AccordionPanelComponent,
     SearchboxComponent,
-    TableComponent
+    TableComponent,
+    NavigationComponent
   ],
   imports: [
     CommonModule,

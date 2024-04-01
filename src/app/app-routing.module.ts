@@ -8,6 +8,8 @@ import { DashboardComponent } from './features/account/dashboard/dashboard.compo
 import { TenantDetailsComponent } from './features/tenant/tenant-details/tenant-details.component';
 import { NotificationsComponent } from './features/notifications/notifications.component';
 import { SupportComponent } from './features/support/support.component';
+import { PartyComponent } from './features/operations/party/party.component';
+import { ProductComponent } from './features/operations/product/product.component';
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: "account", component: DetailsComponent },
   { path: "tenant", component: TenantDetailsComponent },
   { path: "instrument", component: InstrumentDetailsComponent },
+  { path: "party", component: PartyComponent },
+  { path: "product", component: ProductComponent },
   { path: "support", component: SupportComponent }
 ];
 
