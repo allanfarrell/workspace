@@ -1,0 +1,12 @@
+@import url('../../../shared/styles/form.scss');
+@import url('../../../shared/styles/card.scss');
+
+.page-content {
+    padding: 1em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}

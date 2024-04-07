@@ -50,7 +50,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     AccordionComponent,
     AccordionPanelComponent,
     SearchboxComponent,
-    TableComponent
+    TableComponent,
+    NavigationComponent
   ]
 })
 export class SharedModule { }
