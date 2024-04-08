@@ -17,6 +17,9 @@ import { AccordionPanelComponent } from './accordion/accordion-panel/accordion-p
 import { SearchboxComponent } from './searchbox/searchbox.component';
 import { TableComponent } from './table/table.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { MenuItemComponent } from './page/menu-item/menu-item.component';
+import { MenuGroupComponent } from './page/menu-group/menu-group.component';
+import { MenuPageComponent } from './page/menu-page/menu-page.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { NavigationComponent } from './navigation/navigation.component';
     AccordionPanelComponent,
     SearchboxComponent,
     TableComponent,
-    NavigationComponent
+    NavigationComponent,
+    MenuPageComponent,
+    MenuGroupComponent,
+    MenuItemComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +57,10 @@ import { NavigationComponent } from './navigation/navigation.component';
     AccordionPanelComponent,
     SearchboxComponent,
     TableComponent,
-    NavigationComponent
+    NavigationComponent,
+    MenuPageComponent,
+    MenuGroupComponent,
+    MenuItemComponent
   ]
 })
 export class SharedModule { }

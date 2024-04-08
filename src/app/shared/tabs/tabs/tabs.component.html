@@ -1,6 +1,6 @@
 <div class="tab-header">
-    <div *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.isActive">
-      {{tab.tabTitle}}
-    </div>
+  <div *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.isActive">
+    {{tab.tabTitle}}
   </div>
-  <ng-content></ng-content>
+</div>
+<ng-content></ng-content>

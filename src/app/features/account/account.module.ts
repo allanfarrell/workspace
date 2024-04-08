@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DetailsComponent } from './details/details.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SettingsComponent } from './settings/settings.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { AccountComponent } from './account.component';
 
 @NgModule({
   declarations: [
-    DetailsComponent,
-    DashboardComponent
+    DashboardComponent,
+    SettingsComponent,
+    NotificationsComponent,
+    AccountComponent
   ],
   imports: [
     CommonModule,

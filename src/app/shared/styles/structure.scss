@@ -9,3 +9,19 @@
     flex-direction: row;
     gap: 1em;
 }
+
+.page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: lightslategrey;
+    margin: 0px;
+    padding: 1em;
+    height: 100%;
+    min-width: 150px;
+}
