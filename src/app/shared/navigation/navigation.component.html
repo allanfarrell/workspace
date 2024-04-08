@@ -3,8 +3,19 @@
         <img height="50px" width="250px" routerLink="/dashboard">
     </div>
     <div class="row">
+        <div class="search-container">
+            <input class="search-input" placeholder="Search..." type="text" />
+            <mat-icon class="search-icon">search</mat-icon>
+        </div>
         <mat-icon routerLink="/account" matTooltip="Account">account_circle</mat-icon>
         <mat-icon routerLink="/notifications" matTooltip="Notifications">notifications</mat-icon>
-        <mat-icon>more_vert</mat-icon>
+        <mat-icon [matMenuTriggerFor]="menu">more_vert</mat-icon>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/instrument">Instrument</button>
+            <button mat-menu-item routerLink="/search">Search</button>
+            <button mat-menu-item routerLink="/tenant">Configuration</button>
+            <button mat-menu-item routerLink="/account">Account</button>
+            <button mat-menu-item routerLink="/support">Support</button>
+        </mat-menu>
     </div>
 </nav>

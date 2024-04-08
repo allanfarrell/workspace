@@ -1,3 +1,9 @@
+.page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
 .tab {
     padding: 0.4em 1em;
     display: inline-block;
@@ -29,4 +35,14 @@
 
 .ff-attr {
     max-width: 250px;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: lightslategrey;
+    margin: 0px;
+    padding: 1em;
+    height: 100%;
+    min-width: 150px;
 }
