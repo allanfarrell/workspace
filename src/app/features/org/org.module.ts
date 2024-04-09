@@ -7,6 +7,7 @@ import { IntegrationComponent } from './integration/integration.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ReferenceDataComponent } from './reference-data/reference-data.component';
 import { EventsComponent } from './events/events.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -21,7 +22,10 @@ import { EventsComponent } from './events/events.component';
     EventsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
-export class OrgModule { }
+export class OrgModule { 
+  
+}

@@ -17,6 +17,8 @@ import { CommunicationComponent } from './features/tenant/communication/communic
 import { ReferenceDataComponent } from './features/tenant/reference-data/reference-data.component';
 import { ProductsComponent } from './features/tenant/products/products.component';
 import { OperationsModule } from './features/operations/operations.module';
+import { OrgModule } from './features/org/org.module';
+import { AnalyticsModule } from './features/analytics/analytics.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { OperationsModule } from './features/operations/operations.module';
     NotificationsModule,
     AccountModule,
     InstrumentModule,
+    OrgModule,
+    AnalyticsModule,
     OperationsModule,
     SupportModule,
     SharedModule,
