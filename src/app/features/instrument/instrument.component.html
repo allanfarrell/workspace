@@ -2,26 +2,5 @@
 <app-navigation></app-navigation>
 <section class="page">
     <app-menu [menu]="menu"></app-menu>
-    <div>
-        <app-tabs>
-            <app-tab tabTitle="Summary">
-                <app-instrument-summary></app-instrument-summary>
-            </app-tab>
-            <app-tab tabTitle="Associations">
-                <app-instrument-association></app-instrument-association>
-            </app-tab>
-            <app-tab tabTitle="Account">
-                <app-instrument-account></app-instrument-account>
-            </app-tab>
-            <app-tab tabTitle="Security">
-                <app-instrument-security></app-instrument-security>
-            </app-tab>
-            <app-tab tabTitle="Notes">
-                <app-instrument-note></app-instrument-note>
-            </app-tab>
-            <app-tab tabTitle="Events">
-                <app-instrument-event></app-instrument-event>
-            </app-tab>
-        </app-tabs>
-    </div>
+    <router-outlet></router-outlet>
 </section>

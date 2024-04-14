@@ -23,6 +23,7 @@ export class OrgComponent {
         items: [
           { name: 'Funders', route: '/entities/funders' },
           { name: 'Obligors', route: '/entities/obligors' },
+          { name: 'Products', route: '/entities/obligors' },
         ]
       },
       {

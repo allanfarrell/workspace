@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { InstrumentModule } from './features/instrument/instrument.module';
 import { DashboardComponent } from './features/account/dashboard/dashboard.component';
 import { SupportComponent } from './features/support/support.component';
-import { PartyComponent } from './features/operations/party/party.component';
-import { ProductComponent } from './features/operations/product/product.component';
 import { InstrumentComponent } from './features/instrument/instrument.component';
 import { AnalyticsComponent } from './features/analytics/analytics.component';
 import { OrgComponent } from './features/org/org.component';
@@ -77,8 +75,8 @@ export const routes: Routes = [
       { path: '', redirectTo: 'summary', pathMatch: 'full' },
       { path: "summary", component: InstrumentSummaryComponent },
       { path: "associations", component: InstrumentAssociationComponent },
-      { path: "account", component: InstrumentAccountComponent },
-      { path: "security", component: InstrumentSecurityComponent },
+      { path: "accounts", component: InstrumentAccountComponent },
+      { path: "securities", component: InstrumentSecurityComponent },
       { path: "notes", component: InstrumentNoteComponent },
       { path: "events", component: InstrumentEventComponent },
     ]

@@ -7,11 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { AccountModule } from './features/account/account.module';
 import { InstrumentModule } from './features/instrument/instrument.module';
 import { SupportModule } from './features/support/support.module';
-import { OperationsModule } from './features/operations/operations.module';
 import { OrgModule } from './features/org/org.module';
 import { AnalyticsModule } from './features/analytics/analytics.module';
-import { RouterModule } from '@angular/router';
-import { routes } from './app-routing.module'
 import { SearchModule } from './features/search/search.module';
 
 
@@ -27,7 +24,6 @@ import { SearchModule } from './features/search/search.module';
     InstrumentModule,
     OrgModule,
     AnalyticsModule,
-    OperationsModule,
     SupportModule,
     SharedModule,
     MatIconModule,

@@ -11,12 +11,12 @@ export class InstrumentComponent {
       {
         name: 'Instrument',
         items: [
-          { name: 'Summary', route: 'tbc' },
-          { name: 'Associations', route: 'tbc' },
-          { name: 'Accounts', route: 'tbc' },
-          { name: 'Securities', route: 'tbc' },
-          { name: 'Notes', route: 'tbc' },
-          { name: 'Events', route: 'tbc' },
+          { name: 'Summary', route: '/instrument/summary' },
+          { name: 'Associations', route: '/instrument/associations' },
+          { name: 'Accounts', route: '/instrument/accounts' },
+          { name: 'Securities', route: '/instrument/securities' },
+          { name: 'Notes', route: '/instrument/notes' },
+          { name: 'Events', route: '/instrument/events' },
         ]
       }
     ]

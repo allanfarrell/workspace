@@ -1,6 +1,10 @@
 @import url('../../../shared/styles/card.scss');
 @import url('../../../shared/styles/table.scss');
 
+:host {
+    width: 100%;
+}
+
 .page-content {
     padding: 1em;
 }

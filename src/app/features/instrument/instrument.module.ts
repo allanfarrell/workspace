@@ -8,6 +8,7 @@ import { InstrumentNoteComponent } from './instrument-note/instrument-note.compo
 import { InstrumentComponent } from './instrument.component';
 import { InstrumentEventComponent } from './instrument-event/instrument-event.component';
 import { InstrumentAccountComponent } from './instrument-account/instrument-account.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -23,7 +24,8 @@ import { InstrumentAccountComponent } from './instrument-account/instrument-acco
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ]
 })
 export class InstrumentModule { }
