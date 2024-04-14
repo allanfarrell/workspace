@@ -15,8 +15,7 @@ export class MenuComponent {
       {
         name: 'Instrument',
         items: [
-          { name: 'Item1', route: '/somewhere' },
-          { name: 'Item2', route: '/somewhere' }
+          { name: 'Item1', route: '/somewhere' }
         ]
       }
     ]

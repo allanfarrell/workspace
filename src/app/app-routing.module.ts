@@ -30,6 +30,7 @@ import { InstrumentAccountComponent } from './features/instrument/instrument-acc
 import { InstrumentSecurityComponent } from './features/instrument/instrument-security/instrument-security.component';
 import { InstrumentNoteComponent } from './features/instrument/instrument-note/instrument-note.component';
 import { InstrumentEventComponent } from './features/instrument/instrument-event/instrument-event.component';
+import { ProductsComponent } from './features/org/entities/products/products.component';
 
 export const routes: Routes = [
   { path: "search", component: SearchComponent },
@@ -58,6 +59,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'funders', pathMatch: 'full' },
       { path: "funders", component: FundersComponent },
       { path: "obligors", component: ObligorsComponent },
+      { path: "products", component: ProductsComponent },
     ]
   },
   {

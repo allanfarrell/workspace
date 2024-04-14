@@ -11,10 +11,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { RolesComponent } from './configuration/roles/roles.component';
-import { ProductsComponent } from './products/products.component';
+
 import { CommunicationComponent } from './audit/communication/communication.component';
 import { ObligorsComponent } from './entities/obligors/obligors.component';
 import { FundersComponent } from './entities/funders/funders.component';
+import { ProductsComponent } from './entities/products/products.component';
 
 @NgModule({
   declarations: [

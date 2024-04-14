@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  tableHeaders: string[] = ['ID', 'Name', 'Value'];
+  tableHeaders: string[] = ['Id', 'Name', 'Value'];
   tableData: any[] = [
-    { ID: 1, Name: 'Product 1', Value: '1%' },
-    { ID: 2, Name: 'Product 2', Value: '2%' },
-    { ID: 3, Name: 'Product 3', Value: '3%' }
+    { Id: 1, Name: 'Product 1', Value: '1%' },
+    { Id: 2, Name: 'Product 2', Value: '2%' },
+    { Id: 3, Name: 'Product 3', Value: '3%' }
   ];
 }
