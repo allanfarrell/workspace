@@ -1,20 +1,5 @@
+<app-navigation></app-navigation>
 <section class="page">
-    <div class="left-nav">
-        <div>Support Request</div>
-        <div>Guides</div>
-        <div>Release Notes</div>
-    </div>
-    <div>
-        <app-tabs>
-            <app-tab tabTitle="Support Request">
-                <app-support-request></app-support-request>
-            </app-tab>
-            <app-tab tabTitle="Guides">
-                <app-guides></app-guides>
-            </app-tab>
-            <app-tab tabTitle="Release Notes">
-                <app-release-notes></app-release-notes>
-            </app-tab>
-        </app-tabs>
-    </div>
+    <app-menu [menu]="menu"></app-menu>
+    <router-outlet></router-outlet>
 </section>

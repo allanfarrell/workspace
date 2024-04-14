@@ -9,19 +9,29 @@ export class OrgComponent {
   menu = {
     groups: [
       {
-        name: 'Instrument',
+        name: 'Configuration',
         items: [
           { name: 'Details', route: '/org/details' },
           { name: 'Users', route: '/org/users' },
+          { name: 'Roles', route: '/org/roles' },
+          { name: 'Reference Data', route: '/org/reference' },
           { name: 'Integration', route: '/org/integration' },
-          { name: 'Reference Data', route: '/org/data' },
-          { name: 'Events', route: '/org/events' }
         ]
       },
       {
-        name: 'Group2',
-        items: []
-      }
+        name: 'Entities',
+        items: [
+          { name: 'Funders', route: '/entities/funders' },
+          { name: 'Obligors', route: '/entities/obligors' },
+        ]
+      },
+      {
+        name: 'Audit',
+        items: [
+          { name: 'Communication', route: 'org/communication' },
+          { name: 'Events', route: 'org/events' },
+        ]
+      },
     ]
   }
 }

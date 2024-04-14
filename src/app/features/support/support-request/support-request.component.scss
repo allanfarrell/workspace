@@ -1,18 +1,10 @@
 @import url('../../../shared/styles/btn.scss');
 
-.tab {
-    padding: 0.4em 1em;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.selected {
-    border-bottom: 2px solid lightsteelblue;
-}
-
-.tab-content {
+:host {
+    width: 100%;
     padding: 1em;
 }
+
 .release-container {
     margin-bottom: 1em;
 

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { routes } from 'src/app/app-routing.module';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +8,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  constructor(private router: Router) {}
+  selected: string = 'Item1';
   @Input() menu: Menu = {
     groups: [
       {
@@ -14,16 +18,12 @@ export class MenuComponent {
           { name: 'Item1', route: '/somewhere' },
           { name: 'Item2', route: '/somewhere' }
         ]
-      },
-      {
-        name: 'Group2',
-        items: []
       }
     ]
   }
 
   menuItemClick(item: MenuItem) {
-    console.log(item);
+    this.router.navigate([item.route]);
   }
 }
 

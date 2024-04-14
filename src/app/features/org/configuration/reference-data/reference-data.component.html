@@ -1,0 +1,14 @@
+<div class="section-container">
+    <div>Reference Data</div>
+    <div class="filter-container">
+        <div class="row">
+            <div class="search-container">
+                <app-searchbox>Search...</app-searchbox>
+                <mat-icon class="search-icon">search</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <app-table [headers]="tableHeaders" [data]="tableData"></app-table>
+    </div>
+</div>

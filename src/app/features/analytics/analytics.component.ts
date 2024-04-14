@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./analytics.component.scss']
 })
 export class AnalyticsComponent {
-
+  menu = {
+    groups: [
+      {
+        name: 'Reports',
+        items: [
+          { name: 'Report1', route: 'tbc' },
+          { name: 'Report 2', route: 'tbc' },
+        ]
+      }
+    ]
+  }
 }

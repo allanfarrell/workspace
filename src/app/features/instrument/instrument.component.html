@@ -1,13 +1,7 @@
 
+<app-navigation></app-navigation>
 <section class="page">
-    <div class="left-nav">
-        <div>Summary</div>
-        <div>Associations</div>
-        <div>Account</div>
-        <div>Security</div>
-        <div>Notes</div>
-        <div>Events</div>
-    </div>
+    <app-menu [menu]="menu"></app-menu>
     <div>
         <app-tabs>
             <app-tab tabTitle="Summary">

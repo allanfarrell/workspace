@@ -1,16 +1,31 @@
 .menu-container {
     display: flex;
     flex-direction: column;
-    background-color: lightslategrey;
+    background-color: #5B7C99;
     margin: 0px;
     padding: 1em;
     height: 100%;
+    min-width: 200px;
 }
 
 .menu-group {
     margin-bottom: 1em;
 }
 
+.label-group {
+    margin-bottom: 0.4em;
+}
+
 .menu-item { 
-    margin-left: 1em;
+    margin-left: 0.4em;
+    margin-bottom: 0.4em;
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+.label-item {
+
 }

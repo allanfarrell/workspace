@@ -1,6 +1,9 @@
-.page {
+:host {
+    width: 100%;
+    padding: 1em;
     height: 100%;
 }
+
 .page-content {
     display: flex;
     flex-direction: row;

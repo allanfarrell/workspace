@@ -11,14 +11,10 @@ export class AccountComponent {
       {
         name: 'Account',
         items: [
-          { name: 'Dashboard', route: '/org/dashboard' },
-          { name: 'Settings', route: '/org/settings' },
+          { name: 'Dashboard', route: '/account/dashboard' },
           { name: 'Notifications', route: '/account/notifications' },
+          { name: 'Settings', route: '/account/settings' },
         ]
-      },
-      {
-        name: 'Group2',
-        items: []
       }
     ]
   }

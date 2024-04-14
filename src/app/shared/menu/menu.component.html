@@ -1,6 +1,6 @@
 <div class="menu-container">
     <div class="menu-group" *ngFor="let group of menu.groups">
-        <div class="label">{{ group.name }}</div>
-        <div class="label menu-item clickable" *ngFor="let item of group.items" routerLink="/org" (click)="menuItemClick(item)">{{ item.name }}</div>
+        <div class="label-group">{{ group.name }}</div>
+        <div class="label-item menu-item clickable" *ngFor="let item of group.items" routerLink="/org" (click)="menuItemClick(item)">{{ item.name }}</div>
     </div>
 </div>

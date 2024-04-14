@@ -1,32 +1,15 @@
-.tab {
-    padding: 0.4em 1em;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.selected {
-    border-bottom: 2px solid lightsteelblue;
-}
-
-.tab-content {
+:host {
+    width: 100%;
     padding: 1em;
 }
+
 .release-container {
     margin-bottom: 1em;
 
     .release-heading {
-        color: steelblue;
+        color: darkslateblue;
+        font-weight: bold;
         display: inline-block;
-        border-bottom: 1px solid steelblue;
+        border-bottom: 1px solid darkslateblue;
     }
-}
-
-.form-field {
-    margin-bottom: 1em;
-    display: flex;
-    flex-direction: column;
-}
-
-.ff-attr {
-    max-width: 250px;
 }

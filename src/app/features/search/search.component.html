@@ -1,0 +1,27 @@
+<app-navigation></app-navigation>
+<section class="page">
+    <app-menu [menu]="menu"></app-menu>
+    <section class="page-container">
+        <div class="content-container">
+            <app-page-header heading="Search"></app-page-header>
+            <div class="filter-container">
+                <app-searchbox></app-searchbox>
+                <div class="filter-field">
+                    <label>Type</label>
+                    <select>
+                        <option>Party</option>
+                        <option>Instrument</option>
+                        <option>Account</option>
+                        <option>Security</option>
+                    </select>
+                </div>
+            </div>
+            <div class="results-container">
+                <div class="card" routerLink="/instrument">
+                    <div class="card-header">Main Info</div>
+                    <div class="card-subheader">Secondary Info</div>
+                </div>
+            </div>
+        </div>
+    </section>    
+</section>
