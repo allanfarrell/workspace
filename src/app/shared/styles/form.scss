@@ -1,9 +1,16 @@
 .field-group {
     padding: 0.2em;
+    display: flex;
+    flex-direction: column;
+
     .label {
         font-weight: bold;
     }
-    .field {
 
+    input.field {
+        max-width: 250px;
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        padding: 0.5em;
     }
 }

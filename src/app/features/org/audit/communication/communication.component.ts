@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./communication.component.scss']
 })
 export class CommunicationComponent {
-  headers = [ 'Id', 'Channel', 'Purpose', 'Updated'];
+  headers = [ 'Channel', 'Purpose', 'Updated'];
   data = [
     { Id: 1, Channel: 'Email', Purpose: 'RateRise', Updated: '01/01/2023' },
     { Id: 2, Channel: 'SMS', Purpose: 'Notification', Updated: '01/01/2023' },
