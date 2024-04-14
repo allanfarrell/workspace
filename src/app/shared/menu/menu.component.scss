@@ -1,8 +1,16 @@
-.menu {
+.menu-container {
     display: flex;
     flex-direction: column;
     background-color: lightslategrey;
     margin: 0px;
     padding: 1em;
     height: 100%;
+}
+
+.menu-group {
+    margin-bottom: 1em;
+}
+
+.menu-item { 
+    margin-left: 1em;
 }

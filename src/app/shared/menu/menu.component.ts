@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,19 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  menu: Menu = {
+  @Input() menu: Menu = {
     groups: [
       {
         name: 'Instrument',
         items: [
-          {
-            name: 'Item1',
-            route: '/somewhere'
-          },
-          {
-            name: 'Item2',
-            route: '/somewhere'
-          }
+          { name: 'Item1', route: '/somewhere' },
+          { name: 'Item2', route: '/somewhere' }
         ]
       },
       {

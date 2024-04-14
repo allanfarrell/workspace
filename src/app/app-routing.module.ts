@@ -12,18 +12,30 @@ import { InstrumentComponent } from './features/instrument/instrument.component'
 import { AnalyticsComponent } from './features/analytics/analytics.component';
 import { OrgComponent } from './features/org/org.component';
 import { SettingsComponent } from './features/account/settings/settings.component';
+import { CommunicationComponent } from './features/tenant/communication/communication.component';
+import { AccountComponent } from './features/account/account.component';
+import { GuidesComponent } from './features/support/guides/guides.component';
 
-const routes: Routes = [
-  { path: "dashboard", component: DashboardComponent },
-  { path: "notifications", component: NotificationsComponent },
-  { path: "search", component: SearchComponent },
-  { path: "account", component: SettingsComponent },
-  { path: "tenant", component: OrgComponent },
-  { path: "instrument", component: InstrumentComponent },
-  { path: "analytics", component: AnalyticsComponent },
-  { path: "party", component: PartyComponent },
-  { path: "product", component: ProductComponent },
-  { path: "support", component: SupportComponent }
+export const routes: Routes = [
+  { path: "account", component: AccountComponent,
+    children: [
+      { path: 'account', redirectTo: 'account/dashboard', pathMatch: 'full' },
+      { path: "account/dashboard", component: DashboardComponent },
+      { path: "account/settings", component: SettingsComponent }
+    ]
+  },
+  { path: "org", component: OrgComponent,
+    children: [
+      { path: "org/communication", component: CommunicationComponent }
+    ]
+  },
+  {
+    path: 'support', component: SupportComponent,
+    children: [
+      { path: 'support', redirectTo: 'support/guides', pathMatch: 'full' },
+      { path: 'support/guides', component: GuidesComponent }
+    ]
+  }
 ];
 
 @NgModule({

@@ -8,8 +8,7 @@ import { CommunicationComponent } from './communication/communication.component'
 import { ReferenceDataComponent } from './reference-data/reference-data.component';
 import { EventsComponent } from './events/events.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-
-
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ]
 })
 export class OrgModule { 

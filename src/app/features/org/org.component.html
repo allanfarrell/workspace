@@ -1,14 +1,7 @@
+<app-navigation></app-navigation>
 <section class="page">
-    <app-menu></app-menu>
-    <div class="left-nav">
-        <div>Details</div>
-        <div>Users</div>
-        <div>Integration</div>
-        <div>Communication</div>
-        <div>Reference Data</div>
-        <div>Events</div>
-    </div>
+    <app-menu [menu]="menu"></app-menu>
     <div>
-
+        <router-outlet></router-outlet>
     </div>
 </section>

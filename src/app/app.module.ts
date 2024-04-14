@@ -19,6 +19,8 @@ import { ProductsComponent } from './features/tenant/products/products.component
 import { OperationsModule } from './features/operations/operations.module';
 import { OrgModule } from './features/org/org.module';
 import { AnalyticsModule } from './features/analytics/analytics.module';
+import { RouterModule } from '@angular/router';
+import { routes } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -43,7 +45,7 @@ import { AnalyticsModule } from './features/analytics/analytics.module';
     OperationsModule,
     SupportModule,
     SharedModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

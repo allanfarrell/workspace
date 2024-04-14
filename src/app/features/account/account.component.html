@@ -1,3 +1,7 @@
+<app-navigation></app-navigation>
 <section class="page">
-    <app-menu></app-menu>
+    <app-menu [menu]="menu"></app-menu>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
 </section>

@@ -5,6 +5,7 @@ import { ReleaseNotesComponent } from './release-notes/release-notes.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { GuidesComponent } from './guides/guides.component';
 import { SupportRequestComponent } from './support-request/support-request.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -17,7 +18,8 @@ import { SupportRequestComponent } from './support-request/support-request.compo
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ]
 })
 export class SupportModule { }
