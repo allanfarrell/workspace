@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: lightslategrey;
+    background-color: gray;
     border-radius: 20px;
     transition: 0.4s;
   }
@@ -36,7 +36,7 @@
   
   /* Adjust styling when the toggle is checked (active) */
   .toggle-input:checked + .toggle-slider {
-    background-color: lightslategrey;
+    background-color: #5B7C99;
   }
   
   .toggle-input:checked + .toggle-slider:before {

@@ -1,0 +1,5 @@
+<div class="row">
+    <span *ngFor="let item of crumbs; let last = last">
+        {{ item.name }}<span *ngIf="!last"> > </span>
+    </span>
+</div>

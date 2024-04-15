@@ -18,6 +18,7 @@ import { SearchboxComponent } from './searchbox/searchbox.component';
 import { TableComponent } from './table/table.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MenuComponent } from './menu/menu.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MenuComponent } from './menu/menu.component';
     SearchboxComponent,
     TableComponent,
     NavigationComponent,
-    MenuComponent
+    MenuComponent,
+    BreadcrumbComponent
   ],
   imports: [
     CommonModule,

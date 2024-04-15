@@ -1,12 +1,12 @@
 <div class="section">
     <div class="section-heading">Account</div>
-    <div>
+    <div class="field-group">
         <label>Name</label>
-        <input placeholder="name" type="text" disabled/>
+        <input class="field" placeholder="name" type="text" disabled/>
     </div>
-    <div>
+    <div class="field-group">
         <label>Email</label>
-        <input placeholder="email" type="email" disabled/>
+        <input class="field" placeholder="email" type="email" disabled/>
     </div>
 </div>
 <div class="section">
@@ -15,7 +15,7 @@
         <app-toggle>Two Factor Authentication</app-toggle>
     </div>
     <div>
-        <button>Change Password</button>
+        <button class="btn btn-std">Change Password</button>
     </div>
 </div>
 <div class="section">
@@ -23,17 +23,17 @@
     <div>
         <app-toggle>Dark Mode</app-toggle>
     </div>
-    <div>
+    <div class="field-group">
         <label>Menu Configuration</label>
-        <select>
+        <select class="field">
             <option>Quick Search</option>
             <option>Menu Options</option>
             <option>Recent Items</option>
         </select>
     </div>
-    <div>
+    <div class="field-group">
         <label>Recent tracking</label>
-        <select>
+        <select class="field">
             <option>Instruments</option>
             <option>Page</option>
             <option>Account</option>
@@ -43,12 +43,11 @@
 </div>
 <div class="section">
     <div class="section-heading">Notifications</div>
-    <div>
+    <div class="field-group">
         <label>Notification period</label>
-        <input type="text" placeholder="days"/>
+        <input class="field" type="text" placeholder="days"/>
     </div>
     <div>
-        <input type="checkbox" />
-        <label>Send email on notification</label>
+        <app-toggle>Send email on notification</app-toggle>
     </div>
 </div>
