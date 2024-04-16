@@ -1,12 +1,21 @@
-<div class="card">
-    <div>Borrower</div>
-    <div>Borrower 1</div>
+<div class="card col">
+    <div>Borrowers</div>
+    <div>
+        <button class="btn btn-std">Add</button>
+    </div>
+    <app-table [data]="data" [headers]="headers"></app-table>
 </div>
-<div class="card">
-    <div>Guarantor</div>
-    <div>Guarantor 1</div>
+<div class="card col">
+    <div>Garrantors</div>
+    <div>
+        <button class="btn btn-std">Add</button>
+    </div>
+    <app-table [data]="data" [headers]="headers"></app-table>
 </div>
-<div class="card">
-    <div>Funder</div>
-    <div>Funder 1</div>
+<div class="card col">
+    <div>Funders</div>
+    <div>
+        <button class="btn btn-std">Add</button>
+    </div>
+    <app-table [data]="data" [headers]="headers"></app-table>
 </div>

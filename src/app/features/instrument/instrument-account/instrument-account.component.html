@@ -1,7 +1,7 @@
-<div class="card">
+<div class="card col">
     <div>Accounts</div>
-    <button class="btn btn-std">Add</button>
-    <div>Account1</div>
-    <div>Account2</div>
-    <div>Account3</div>
+    <div>
+        <button class="btn btn-std">Add</button>
+    </div>
+    <app-table [data]="data" [headers]="headers"></app-table>
 </div>

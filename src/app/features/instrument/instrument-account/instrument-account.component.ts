@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./instrument-account.component.scss']
 })
 export class InstrumentAccountComponent {
-
+  data = [
+    { id: '1', type: 'Standard', name: 'Account1' },
+    { id: '2', type: 'Offset', name: 'Account2' },
+    { id: '3', type: 'Offset', name: 'Account3' },
+  ];
+  headers = [ 'id', 'type', 'name' ];
 }
