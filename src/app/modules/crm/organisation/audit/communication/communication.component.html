@@ -1,5 +1,9 @@
-<div>Communication</div>
-<div class="filters">
-    <app-searchbox></app-searchbox>
+<div class="card col">
+    <div class="card-header pad">Communication</div>
+    <div class="col pad">
+        <div class="filters">
+            <app-searchbox></app-searchbox>
+        </div>
+        <app-table [headers]="headers" [data]="data"></app-table>
+    </div>
 </div>
-<app-table [headers]="headers" [data]="data"></app-table>

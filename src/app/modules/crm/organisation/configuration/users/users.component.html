@@ -1,7 +1,9 @@
-<div class="card pad">
-    <div>Users</div>
-    <div>
-        <button class="btn btn-std">Add</button>
+<div class="card">
+    <div class="card-header pad">Users</div>
+    <div class="col pad">
+        <div>
+            <button class="btn btn-std">Add</button>
+        </div>
+        <app-table [headers]="headers" [data]="data"></app-table>
     </div>
-    <app-table [headers]="headers" [data]="data"></app-table>
 </div>
