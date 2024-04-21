@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -16,13 +15,14 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionPanelComponent } from './accordion/accordion-panel/accordion-panel.component';
 import { SearchboxComponent } from './searchbox/searchbox.component';
 import { TableComponent } from './table/table.component';
-import { NavigationComponent } from './navigation/navigation.component';
 import { MenuComponent } from './menu/menu.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { SelectListComponent } from './select-list/select-list.component';
+import { MenuListComponent } from './menu-list/menu-list.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
-    LeftMenuComponent,
     PageHeaderComponent,
     TabComponent,
     TabsComponent,
@@ -31,9 +31,11 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     AccordionPanelComponent,
     SearchboxComponent,
     TableComponent,
-    NavigationComponent,
     MenuComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SelectListComponent,
+    MenuListComponent,
+    NavigationComponent
   ],
   imports: [
     CommonModule,
@@ -43,10 +45,10 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     MatButtonModule,
     RouterLink,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   exports: [
-    LeftMenuComponent,
     PageHeaderComponent,
     TabsComponent,
     TabComponent,
@@ -55,8 +57,9 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     AccordionPanelComponent,
     SearchboxComponent,
     TableComponent,
-    NavigationComponent,
-    MenuComponent
+    MenuComponent,
+    MenuListComponent,
+    NavigationComponent
   ]
 })
 export class SharedModule { }

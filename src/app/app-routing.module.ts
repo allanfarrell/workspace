@@ -1,39 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InstrumentModule } from './features/instrument/instrument.module';
-import { DashboardComponent } from './features/account/dashboard/dashboard.component';
-import { SupportComponent } from './features/support/support.component';
-import { InstrumentComponent } from './features/instrument/instrument.component';
-import { AnalyticsComponent } from './features/analytics/analytics.component';
-import { OrgComponent } from './features/org/org.component';
-import { SettingsComponent } from './features/account/settings/settings.component';
-import { AccountComponent } from './features/account/account.component';
-import { GuidesComponent } from './features/support/guides/guides.component';
-import { ReleaseNotesComponent } from './features/support/release-notes/release-notes.component';
-import { SupportRequestComponent } from './features/support/support-request/support-request.component';
-import { DetailsComponent } from './features/org/details/details.component';
-import { UsersComponent } from './features/org/configuration/users/users.component';
-import { ReferenceDataComponent } from './features/org/configuration/reference-data/reference-data.component';
-
-import { IntegrationComponent } from './features/org/configuration/integration/integration.component';
-import { NotificationsComponent } from './features/account/notifications/notifications.component';
-
-import { RolesComponent } from './features/org/configuration/roles/roles.component';
-import { CommunicationComponent } from './features/org/audit/communication/communication.component';
-import { EventsComponent } from './features/org/audit/events/events.component';
-import { ObligorsComponent } from './features/org/entities/obligors/obligors.component';
-import { FundersComponent } from './features/org/entities/funders/funders.component';
-import { SearchComponent } from './features/search/search.component';
-import { InstrumentSummaryComponent } from './features/instrument/instrument-summary/instrument-summary.component';
-import { InstrumentAssociationComponent } from './features/instrument/instrument-association/instrument-association.component';
-import { InstrumentAccountComponent } from './features/instrument/instrument-account/instrument-account.component';
-import { InstrumentSecurityComponent } from './features/instrument/instrument-security/instrument-security.component';
-import { InstrumentNoteComponent } from './features/instrument/instrument-note/instrument-note.component';
-import { InstrumentEventComponent } from './features/instrument/instrument-event/instrument-event.component';
-import { ProductsComponent } from './features/org/entities/products/products.component';
+import { DashboardComponent } from './modules/account/dashboard/dashboard.component';
+import { SupportComponent } from './modules/support/support.component';
+import { SettingsComponent } from './modules/account/settings/settings.component';
+import { AccountComponent } from './modules/account/account.component';
+import { GuidesComponent } from './modules/support/guides/guides.component';
+import { ReleaseNotesComponent } from './modules/support/release-notes/release-notes.component';
+import { SupportRequestComponent } from './modules/support/support-request/support-request.component';
+import { NotificationsComponent } from './modules/account/notifications/notifications.component';
+import { SearchComponent } from './modules/mortgage-management/search/search.component';
+import { CrmModule } from './modules/crm/crm.module';
+import { UsersComponent } from './modules/crm/organisation/configuration/users/users.component';
+import { IntegrationComponent } from './modules/crm/organisation/configuration/integration/integration.component';
+import { CommunicationComponent } from './modules/crm/organisation/audit/communication/communication.component';
+import { RolesComponent } from './modules/crm/organisation/configuration/roles/roles.component';
+import { ReferenceDataComponent } from './modules/crm/organisation/configuration/reference-data/reference-data.component';
+import { EventsComponent } from './modules/crm/organisation/audit/events/events.component';
+import { CrmComponent } from './modules/crm/crm.component';
+import { FundersComponent } from './modules/crm/organisation/entities/funders/funders.component';
+import { ObligorsComponent } from './modules/crm/organisation/entities/obligors/obligors.component';
+import { ProductsComponent } from './modules/crm/organisation/entities/products/products.component';
+import { MortgageManagementComponent } from './modules/mortgage-management/mortgage-management.component';
+import { InstrumentComponent } from './modules/mortgage-management/instrument/instrument.component';
+import { AssociationComponent } from './modules/mortgage-management/association/association.component';
+import { SecurityComponent } from './modules/mortgage-management/security/security.component';
+import { NoteComponent } from './modules/mortgage-management/note/note.component';
+import { NotFoundComponent } from './core/pages/not-found/not-found.component';
 
 export const routes: Routes = [
-  { path: "search", component: SearchComponent },
   { path: "account", component: AccountComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -42,10 +36,9 @@ export const routes: Routes = [
       { path: "notifications", component: NotificationsComponent },
     ]
   },
-  { path: "org", component: OrgComponent,
+  { path: "org", component: CrmComponent,
     children: [
-      { path: '', redirectTo: 'details', pathMatch: 'full' },
-      { path: "details", component: DetailsComponent },
+      { path: '', redirectTo: 'users', pathMatch: 'full' },
       { path: "users", component: UsersComponent },
       { path: "integration", component: IntegrationComponent },
       { path: "communication", component:  CommunicationComponent },
@@ -54,7 +47,7 @@ export const routes: Routes = [
       { path: "events", component: EventsComponent },
     ]
   },
-  { path: "entities", component: OrgComponent,
+  { path: "entities", component: CrmComponent,
     children: [
       { path: '', redirectTo: 'funders', pathMatch: 'full' },
       { path: "funders", component: FundersComponent },
@@ -62,6 +55,20 @@ export const routes: Routes = [
       { path: "products", component: ProductsComponent },
     ]
   },
+  { path: "mgr", component: MortgageManagementComponent,
+  children: [
+    { path: '', redirectTo: 'search', pathMatch: 'full' },
+    { path: "search", component: SearchComponent },
+    { path: "instrument", component: InstrumentComponent },
+    { path: "obligor", component: ObligorsComponent },
+    { path: "summary", component: InstrumentComponent },
+    { path: "association", component: AssociationComponent },
+    { path: "account", component: AccountComponent },
+    { path: "security", component: SecurityComponent },
+    { path: "note", component: NoteComponent },
+    { path: "event", component: EventsComponent },
+  ]
+},
   {
     path: 'support', component: SupportComponent,
     children: [
@@ -71,20 +78,7 @@ export const routes: Routes = [
       { path: "request", component: SupportRequestComponent },
     ]
   },
-  {
-    path: 'instrument', component: InstrumentComponent,
-    children: [
-      { path: '', redirectTo: 'summary', pathMatch: 'full' },
-      { path: "summary", component: InstrumentSummaryComponent },
-      { path: "associations", component: InstrumentAssociationComponent },
-      { path: "accounts", component: InstrumentAccountComponent },
-      { path: "securities", component: InstrumentSecurityComponent },
-      { path: "notes", component: InstrumentNoteComponent },
-      { path: "events", component: InstrumentEventComponent },
-    ]
-  },
-  { path: 'analytics', component: AnalyticsComponent },
-  { path: '**', redirectTo: 'account/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: '/account/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({

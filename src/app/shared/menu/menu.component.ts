@@ -8,7 +8,12 @@ import { routes } from 'src/app/app-routing.module';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  constructor(private router: Router) {}
+  selectedGroup: string = '';
+  selectedItem: string = '';
+  constructor(private router: Router) {
+    this.selectedGroup = this.menu.groups[0].name;
+    this.selectedItem = this.menu.groups[0].items[0].name;
+  }
   selected: string = 'Item1';
   @Input() menu: Menu = {
     groups: [
@@ -22,7 +27,18 @@ export class MenuComponent {
   }
 
   menuItemClick(item: MenuItem) {
-    this.router.navigate([item.route]);
+    if(item.name !== this.selectedItem) {
+      this.selectedItem = item.name;
+      this.router.navigate([item.route]);
+    }
+  }
+
+  toggleGroup(group: MenuGroup) {
+    if(this.selectedGroup == group.name ){
+      this.selectedGroup = '';
+    } else {
+      this.selectedGroup = group.name;
+    }
   }
 }
 

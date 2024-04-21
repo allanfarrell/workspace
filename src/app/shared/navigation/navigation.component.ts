@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { menuItem } from '../menu-list/menu-list.component';
 
 @Component({
   selector: 'app-navigation',
@@ -7,8 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+  menuName: string = 'Module';
+  modules: menuItem[] = [
+    //{ name: 'Application', route: '/account/dashboard' },
+    //{ name: 'Assessment', route: '/account/dashboard' },
+    { name: 'Mortgage Management', route: '/mgr/search' },
+    //{ name: 'Treasury', route: '/account/dashboard' },
+    //{ name: 'Securitisation', route: '/account/dashboard' },
+    { name: 'Configuration', route: '/org/users' },
+    //{ name: 'System Admin', route: '/org/details' },
+  ];
   constructor(private router: Router) {}
-  search(){
-    this.router.navigate(['/search']);
+
+  navigate(item: menuItem){
+    console.log(item.route);
+    this.router.navigate([item.route]);
   }
 }

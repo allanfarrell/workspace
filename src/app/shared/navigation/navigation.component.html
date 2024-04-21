@@ -3,18 +3,11 @@
         <img height="50px" width="250px" routerLink="/dashboard">
     </div>
     <div class="row">
-        <div class="search-container">
-            <form (submit)="search()">
-                <input class="search-input" placeholder="Search..." type="text"/>
-                <mat-icon class="search-icon">search</mat-icon>
-            </form>
-        </div>
-        <mat-icon routerLink="/account/settings" matTooltip="Account">account_circle</mat-icon>
+        <app-menu-list placeholder="Module" [items]="modules" (selectedItemChange)="navigate($event)"></app-menu-list>
         <mat-icon routerLink="/account/notifications" matTooltip="Notifications">notifications</mat-icon>
+        <mat-icon routerLink="/account/settings" matTooltip="Account">account_circle</mat-icon>
         <mat-icon [matMenuTriggerFor]="menu">more_vert</mat-icon>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink="/org">Organisation</button>
-            <button mat-menu-item routerLink="/analytics">Analytics</button>
             <button mat-menu-item routerLink="/support">Support</button>
         </mat-menu>
     </div>

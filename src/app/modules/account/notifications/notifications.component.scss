@@ -1,0 +1,14 @@
+@import url('./../../../shared/styles/btn.scss');
+@import url('./../../../shared/styles/card.scss');
+@import url('./../../../shared/styles/structure.scss');
+
+:host {
+    width: 100%;
+    padding: 1em;
+    height: 100%;
+}
+
+.section-heading {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}

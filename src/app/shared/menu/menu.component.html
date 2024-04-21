@@ -1,6 +1,15 @@
 <div class="menu-container">
-    <div class="menu-group" *ngFor="let group of menu.groups">
-        <div class="label-group">{{ group.name }}</div>
-        <div class="label-item menu-item clickable" *ngFor="let item of group.items" routerLink="/org" (click)="menuItemClick(item)">{{ item.name }}</div>
-    </div>
+    <ng-container *ngFor="let group of menu.groups">
+        <div
+            [ngClass]="{'active': group.name === selectedGroup}"
+            class="menu-group clickable" 
+            (click)="toggleGroup(group)">{{ group.name }}</div>
+        <ng-container *ngIf="group.name == selectedGroup">
+            <div 
+                *ngFor="let item of group.items" routerLink="/org"
+                [ngClass]="{'active': item.name === selectedItem}"  
+                class="menu-item clickable" 
+                (click)="menuItemClick(item)">{{ item.name }}</div>
+        </ng-container>
+    </ng-container>
 </div>

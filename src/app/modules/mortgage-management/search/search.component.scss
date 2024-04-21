@@ -1,0 +1,44 @@
+@import url('./../../../shared/styles/form.scss');
+@import url('./../../../shared/styles/structure.scss');
+
+.page-container {
+
+    .content-container {
+        flex: 9;
+
+        .filter-container {
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+            padding: 0.4em 1em;
+
+            .filter-field {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5em;
+            }
+        }
+
+        .results-container {
+            .card {
+                background-color: whitesmoke;
+                padding: 0.4em 1em;
+                .card-header {
+                    display: inline-block;
+                    size: 1em;
+                }
+                .card-subheader {
+                    size: 0.7em;
+                    color: grey;
+                    font-style: italic;
+                    display: inline-block;
+                    padding-left: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
