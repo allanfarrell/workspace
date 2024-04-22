@@ -78,6 +78,7 @@ export const routes: Routes = [
       { path: "request", component: SupportRequestComponent },
     ]
   },
+  { path: '**', component: NotFoundComponent },
   { path: '**', redirectTo: '/account/dashboard', pathMatch: 'full' },
 ];
 

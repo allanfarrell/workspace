@@ -1,5 +1,6 @@
 @import url('./../../../shared/styles/form.scss');
 @import url('./../../../shared/styles/structure.scss');
+@import url('./../../../shared/styles/card.scss');
 
 .page-container {
 
@@ -41,4 +42,9 @@
 
 .clickable {
     cursor: pointer;
+}
+
+:host {
+    width: 100%;
+    height: 100%;
 }

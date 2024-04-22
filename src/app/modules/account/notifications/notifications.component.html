@@ -1,7 +1,7 @@
 <div class="card">
     <div class="section-heading pad">Notifications</div>
     <div>
-        <div class="filters">
+        <div class="row pad">
             <app-searchbox></app-searchbox>
             <label>From:</label>
             <input type="date" />
@@ -9,9 +9,11 @@
             <input type="date" />
             <app-toggle>Read</app-toggle>
         </div>
-        <div>
+        <div class="pad">
             <button class="btn btn-std">Read</button>
         </div>
-        <app-table [headers]="headers" [data]="data"></app-table>
+        <div class="pad">
+            <app-table [headers]="headers" [data]="data"></app-table>
+        </div>
     </div>
 </div>
