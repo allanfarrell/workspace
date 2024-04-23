@@ -6,16 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./support.component.scss']
 })
 export class SupportComponent {
-  menu = {
-    groups: [
-      {
-        name: 'Support',
-        items: [
-          { name: 'Request', route: '/support/request' },
-          { name: 'Guides', route: '/support/guides' },
-          { name: 'Release', route: '/support/release' },
-        ]
-      }
-    ]
-  };
+  menu = [
+    { group: 'Support', name: 'Request', route: '/support/request' },
+    { group: 'Support', name: 'Guides', route: '/support/guides' },
+    { group: 'Support', name: 'Release', route: '/support/release' }
+  ];
 }

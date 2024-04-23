@@ -6,20 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./mortgage-management.component.scss']
 })
 export class MortgageManagementComponent {
-  menu = {
-    groups: [
-      {
-        name: 'Mortgage Management',
-        items: [
-          { name: 'Search', route: '/mgr/search' },
-          { name: 'Summary', route: '/mgr/summary' },
-          { name: 'Association', route: '/mgr/association' },
-          { name: 'Event', route: '/mgr/event' },
-          { name: 'Note', route: '/mgr/node' },
-          { name: 'Obligor', route: '/mgr/obligor' },
-          { name: 'Security', route: '/mgr/security' },
-        ]
-      },
-    ]
-  };
+  menu = [
+    { group: 'Mortgage Management', name: 'Search', route: '/mgr/search' },
+    { group: 'Mortgage Management', name: 'Summary', route: '/mgr/summary' },
+    { group: 'Mortgage Management', name: 'Association', route: '/mgr/association' },
+    { group: 'Mortgage Management', name: 'Event', route: '/mgr/event' },
+    { group: 'Mortgage Management', name: 'Note', route: '/mgr/node' },
+    { group: 'Mortgage Management', name: 'Obligor', route: '/mgr/obligor' },
+    { group: 'Mortgage Management', name: 'Security', route: '/mgr/security' }
+  ];
 }

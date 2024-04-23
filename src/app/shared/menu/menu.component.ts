@@ -1,3 +1,4 @@
+import { group } from '@angular/animations';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { routes } from 'src/app/app-routing.module';
@@ -8,22 +9,18 @@ import { routes } from 'src/app/app-routing.module';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  @Input() menu: MenuItem[] = [];
+  menu2: MenuGroup[] = [];
   selectedGroup: string = '';
-  selectedItem: string = '';
-  constructor(private router: Router) {
-    this.selectedGroup = this.menu.groups[0].name;
-    this.selectedItem = this.menu.groups[0].items[0].name;
-  }
-  selected: string = 'Item1';
-  @Input() menu: Menu = {
-    groups: [
-      {
-        name: 'Instrument',
-        items: [
-          { name: 'Item1', route: '/somewhere' }
-        ]
-      }
-    ]
+  selectedItem: string | undefined = '';
+  selectedMenuItem: MenuItem | undefined = undefined;
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.preSelectMenuItem(this.router.url);
+    this.selectedGroup = this.selectedMenuItem?.group ?? '';
+    this.selectedItem = this.selectedMenuItem?.name ?? '';
+    this.menu2 = this.createMenu();
   }
 
   menuItemClick(item: MenuItem) {
@@ -33,25 +30,44 @@ export class MenuComponent {
     }
   }
 
-  toggleGroup(group: MenuGroup) {
-    if(this.selectedGroup == group.name ){
+  toggleGroup(groupName: string) {
+    if(this.selectedGroup == groupName){
       this.selectedGroup = '';
     } else {
-      this.selectedGroup = group.name;
+      this.selectedGroup = groupName;
     }
   }
-}
 
-interface Menu {
-  groups: MenuGroup[];
-}
+  preSelectMenuItem(currentUrl: string) {
+    this.selectedMenuItem = this.menu.find(item => currentUrl.includes(item.route)) || undefined;
+  }
 
-interface MenuGroup {
-  name: string;
-  items: MenuItem[];
+  createMenu(): MenuGroup[] {
+    const groupedItems: { [key: string]: MenuItem[] } = {};
+
+    this.menu.forEach(item => {
+      if (!groupedItems[item.group]) {
+        groupedItems[item.group] = [];
+      }
+      groupedItems[item.group].push(item);
+    });
+
+    const menuGroups: MenuGroup[] = Object.entries(groupedItems).map(([groupName, items]) => ({
+      name: groupName,
+      items: items
+    }));
+
+    return menuGroups;
+  }
 }
 
 interface MenuItem {
   name: string;
+  group: string;
   route: string;
+}
+
+interface MenuGroup {
+  name: string,
+  items: MenuItem[]
 }
