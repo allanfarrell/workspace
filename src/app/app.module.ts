@@ -9,6 +9,8 @@ import { SupportModule } from './modules/support/support.module';
 import { MortgageManagementModule } from './modules/mortgage-management/mortgage-management.module';
 import { CoreModule } from './core/core.module';
 import { CrmModule } from './modules/crm/crm.module';
+import { InstrumentModule } from './modules/instrument/instrument.module';
+import { AssessmentModule } from './modules/assessment/assessment.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { CrmModule } from './modules/crm/crm.module';
     SupportModule,
     SharedModule,
     MatIconModule,
+    InstrumentModule,
+    AssessmentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

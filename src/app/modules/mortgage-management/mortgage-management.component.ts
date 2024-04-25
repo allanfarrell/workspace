@@ -11,7 +11,7 @@ export class MortgageManagementComponent {
     { group: 'Mortgage Management', name: 'Summary', route: '/mgr/summary' },
     { group: 'Mortgage Management', name: 'Association', route: '/mgr/association' },
     { group: 'Mortgage Management', name: 'Event', route: '/mgr/event' },
-    { group: 'Mortgage Management', name: 'Note', route: '/mgr/node' },
+    { group: 'Mortgage Management', name: 'Note', route: '/mgr/note' },
     { group: 'Mortgage Management', name: 'Obligor', route: '/mgr/obligor' },
     { group: 'Mortgage Management', name: 'Security', route: '/mgr/security' }
   ];

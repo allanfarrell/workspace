@@ -21,11 +21,16 @@ import { FundersComponent } from './modules/crm/organisation/entities/funders/fu
 import { ObligorsComponent } from './modules/crm/organisation/entities/obligors/obligors.component';
 import { ProductsComponent } from './modules/crm/organisation/entities/products/products.component';
 import { MortgageManagementComponent } from './modules/mortgage-management/mortgage-management.component';
-import { InstrumentComponent } from './modules/mortgage-management/instrument/instrument.component';
 import { AssociationComponent } from './modules/mortgage-management/association/association.component';
 import { SecurityComponent } from './modules/mortgage-management/security/security.component';
-import { NoteComponent } from './modules/mortgage-management/note/note.component';
+
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
+import { InstSummaryComponent } from './modules/instrument/inst-summary/inst-summary.component';
+import { InstNoteComponent } from './modules/instrument/inst-note/inst-note.component';
+import { InstEventComponent } from './modules/instrument/inst-event/inst-event.component';
+import { InstrumentComponent } from './modules/instrument/instrument.component';
+import { InstAccountComponent } from './modules/instrument/inst-account/inst-account.component';
+import { AssessmentComponent } from './modules/assessment/assessment.component';
 
 export const routes: Routes = [
   { path: "account", component: AccountComponent,
@@ -56,19 +61,31 @@ export const routes: Routes = [
     ]
   },
   { path: "mgr", component: MortgageManagementComponent,
-  children: [
-    { path: '', redirectTo: 'search', pathMatch: 'full' },
-    { path: "search", component: SearchComponent },
-    { path: "instrument", component: InstrumentComponent },
-    { path: "obligor", component: ObligorsComponent },
-    { path: "summary", component: InstrumentComponent },
-    { path: "association", component: AssociationComponent },
-    { path: "account", component: AccountComponent },
-    { path: "security", component: SecurityComponent },
-    { path: "note", component: NoteComponent },
-    { path: "event", component: EventsComponent },
-  ]
-},
+    children: [
+      { path: '', redirectTo: 'search', pathMatch: 'full' },
+      { path: "search", component: SearchComponent },
+      { path: "obligor", component: ObligorsComponent },
+      { path: "association", component: AssociationComponent },
+      { path: "account", component: AccountComponent },
+      { path: "security", component: SecurityComponent },
+      { path: "note", component: SecurityComponent },
+      { path: "event", component: EventsComponent },
+    ]
+  },
+  { path: "assessment", component: AssessmentComponent,
+    children: [
+      { path: '**', redirectTo: '', pathMatch: 'full' },
+    ]
+  },
+  { path: "instrument", component: InstrumentComponent,
+    children: [
+      { path: '', redirectTo: 'summary', pathMatch: 'full' },
+      { path: "summary", component: InstSummaryComponent },
+      { path: "account", component: InstAccountComponent },
+      { path: "note", component: InstNoteComponent },
+      { path: "event", component: InstEventComponent },
+    ]
+  },
   {
     path: 'support', component: SupportComponent,
     children: [

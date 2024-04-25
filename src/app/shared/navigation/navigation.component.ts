@@ -11,11 +11,10 @@ export class NavigationComponent {
   menuName: string = 'Module';
   modules: menuItem[] = [
     //{ name: 'Application', route: '/account/dashboard' },
-    //{ name: 'Assessment', route: '/account/dashboard' },
+    { name: 'Assessment', route: '/assessment/search' },
     { name: 'Mortgage Management', route: '/mgr/search' },
     //{ name: 'Treasury', route: '/account/dashboard' },
     //{ name: 'Securitisation', route: '/account/dashboard' },
-    { name: 'Configuration', route: '/org/users' },
     //{ name: 'System Admin', route: '/org/details' },
   ];
   constructor(private router: Router) {}
