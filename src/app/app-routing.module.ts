@@ -21,7 +21,6 @@ import { FundersComponent } from './modules/crm/organisation/entities/funders/fu
 import { ObligorsComponent } from './modules/crm/organisation/entities/obligors/obligors.component';
 import { ProductsComponent } from './modules/crm/organisation/entities/products/products.component';
 import { MortgageManagementComponent } from './modules/mortgage-management/mortgage-management.component';
-import { AssociationComponent } from './modules/mortgage-management/association/association.component';
 import { SecurityComponent } from './modules/mortgage-management/security/security.component';
 
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
@@ -31,6 +30,11 @@ import { InstEventComponent } from './modules/instrument/inst-event/inst-event.c
 import { InstrumentComponent } from './modules/instrument/instrument.component';
 import { InstAccountComponent } from './modules/instrument/inst-account/inst-account.component';
 import { AssessmentComponent } from './modules/assessment/assessment.component';
+import { AssessQueueComponent } from './modules/assessment/assess-queue/assess-queue.component';
+import { InstTransactionComponent } from './modules/instrument/inst-transaction/inst-transaction.component';
+import { InstSecurityComponent } from './modules/instrument/inst-security/inst-security.component';
+import { InstVariationComponent } from './modules/instrument/inst-variation/inst-variation.component';
+import { InstDocumentComponent } from './modules/instrument/inst-document/inst-document.component';
 
 export const routes: Routes = [
   { path: "account", component: AccountComponent,
@@ -65,16 +69,14 @@ export const routes: Routes = [
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: "search", component: SearchComponent },
       { path: "obligor", component: ObligorsComponent },
-      { path: "association", component: AssociationComponent },
       { path: "account", component: AccountComponent },
       { path: "security", component: SecurityComponent },
-      { path: "note", component: SecurityComponent },
-      { path: "event", component: EventsComponent },
     ]
   },
   { path: "assessment", component: AssessmentComponent,
     children: [
-      { path: '**', redirectTo: '', pathMatch: 'full' },
+      { path: '', redirectTo: 'queue', pathMatch: 'full' },
+      { path: "queue", component: AssessQueueComponent },
     ]
   },
   { path: "instrument", component: InstrumentComponent,
@@ -84,6 +86,10 @@ export const routes: Routes = [
       { path: "account", component: InstAccountComponent },
       { path: "note", component: InstNoteComponent },
       { path: "event", component: InstEventComponent },
+      { path: "security", component: InstSecurityComponent },
+      { path: "transaction", component: InstTransactionComponent },
+      { path: "variation", component: InstVariationComponent },
+      { path: "document", component: InstDocumentComponent },
     ]
   },
   {
@@ -96,7 +102,6 @@ export const routes: Routes = [
     ]
   },
   { path: '**', component: NotFoundComponent },
-  { path: '**', redirectTo: '/account/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({

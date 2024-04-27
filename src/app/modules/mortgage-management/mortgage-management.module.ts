@@ -7,9 +7,9 @@ import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { AccountComponent } from './account/account.component';
-import { AssociationComponent } from './association/association.component';
 import { SecurityComponent } from './security/security.component';
 import { ObligorComponent } from './obligor/obligor.component';
+import { MmProductsComponent } from './mm-products/mm-products.component';
 
 
 @NgModule({
@@ -17,9 +17,9 @@ import { ObligorComponent } from './obligor/obligor.component';
     MortgageManagementComponent,
     SearchComponent,
     AccountComponent,
-    AssociationComponent,
     SecurityComponent,
     ObligorComponent,
+    MmProductsComponent,
   ],
   imports: [
     CommonModule,

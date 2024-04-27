@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./inst-account.component.scss']
 })
 export class InstAccountComponent {
-
+  data = [
+    { id: '1', AccountNumber: '2090902132', Balance: '3000' }
+  ];
+  headers = [ 'AccountNumber', 'Balance' ];
 }

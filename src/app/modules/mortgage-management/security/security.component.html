@@ -1,24 +1,7 @@
 <div class="page-content">
     <div class="card">
         <div class="card-header pad">Address</div>
-        <div class="row">
-            <div class="field-group">
-                <div class="label">Number</div>
-                <div class="field">1</div>
-            </div>
-            <div class="field-group">
-                <div class="label">Street</div>
-                <div class="field">Somewhere street</div>
-            </div>
-            <div class="field-group">
-                <div class="label">Suburb</div>
-                <div class="field">North Sydney</div>
-            </div>
-            <div class="field-group">
-                <div class="label">Postcode</div>
-                <div class="field">2000</div>
-            </div>
-        </div>
+        <app-table [data]="data" [headers]="headers"></app-table>
         <div>Valuation</div>
         <div class="row">
             <div class="field-group">

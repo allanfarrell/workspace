@@ -1,1 +1,21 @@
-<p>inst-summary works!</p>
+<div class="card">
+    <div class="pad">Details</div>
+    <div class="row pad">
+        <div class="field-group">
+            <div class="field-label">TBC</div>
+            <input class="field" type="text" placeholder="tbc">
+        </div>
+        <div class="field-group">
+            <div class="field-label">TBC</div>
+            <input class="field" type="text" placeholder="tbc">
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="pad">Accounts</div>
+    <app-table [data]="accounts" [headers]="accHeaders"></app-table>
+</div>
+<div class="card">
+    <div class="pad">Obligors</div>
+    <app-table [data]="obligors" [headers]="oblHeaders"></app-table>
+</div>

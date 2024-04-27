@@ -11,7 +11,7 @@ export class NavigationComponent {
   menuName: string = 'Module';
   modules: menuItem[] = [
     //{ name: 'Application', route: '/account/dashboard' },
-    { name: 'Assessment', route: '/assessment/search' },
+    { name: 'Assessment', route: '/assessment/queue' },
     { name: 'Mortgage Management', route: '/mgr/search' },
     //{ name: 'Treasury', route: '/account/dashboard' },
     //{ name: 'Securitisation', route: '/account/dashboard' },

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./security.component.scss']
 })
 export class SecurityComponent {
-
+  data = [
+    { id: '1', number: '1', street: 'Somewhere street', suburb: 'North Sydney', postcode: '2000' }
+  ];
+  headers = [ 'number', 'street', 'suburb', 'postcode'];
 }

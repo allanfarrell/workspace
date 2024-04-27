@@ -6,7 +6,7 @@
             (click)="toggleGroup(group.name)" >{{ group.name }}</div>
         <ng-container *ngIf="group.name == selectedGroup">
             <div 
-                *ngFor="let item of group.items" routerLink="/org"
+                *ngFor="let item of group.items"
                 [ngClass]="{'active': item.name === selectedItem }"
                 class="menu-item clickable" 
                 (click)="menuItemClick(item)">{{ item.name }}</div>
