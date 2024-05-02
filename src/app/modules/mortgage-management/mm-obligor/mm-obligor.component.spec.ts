@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ObligorComponent } from './obligor.component';
+import { MmObligorComponent } from './mm-obligor.component';
 
-describe('ObligorComponent', () => {
-  let component: ObligorComponent;
-  let fixture: ComponentFixture<ObligorComponent>;
+describe('MmObligorComponent', () => {
+  let component: MmObligorComponent;
+  let fixture: ComponentFixture<MmObligorComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ObligorComponent]
+      declarations: [MmObligorComponent]
     });
-    fixture = TestBed.createComponent(ObligorComponent);
+    fixture = TestBed.createComponent(MmObligorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

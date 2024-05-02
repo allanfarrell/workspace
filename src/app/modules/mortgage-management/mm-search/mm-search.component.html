@@ -12,10 +12,7 @@
             </select>
         </div>
         <div class="results-container">
-            <div class="card-thin clickable" routerLink="/instrument">
-                <div class="card-header">Main Info</div>
-                <div class="card-subheader">Secondary Info</div>
-            </div>
+            <app-table [headers]="searchHeaders" [data]="searchResults" [clickable]="true" (clickEvent)="rowClick($event)"></app-table>
         </div>
     </div>
 </div>

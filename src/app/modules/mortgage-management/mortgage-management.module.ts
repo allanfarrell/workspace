@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MortgageManagementComponent } from './mortgage-management.component';
-import { SearchComponent } from './search/search.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { AccountComponent } from './account/account.component';
 import { SecurityComponent } from './security/security.component';
-import { ObligorComponent } from './obligor/obligor.component';
-import { MmProductsComponent } from './mm-products/mm-products.component';
+import { MmObligorComponent } from './mm-obligor/mm-obligor.component';
+import { MmSearchComponent } from './mm-search/mm-search.component';
+import { MmSecurityComponent } from './mm-security/mm-security.component';
+import { MmProductComponent } from './mm-product/mm-product.component';
 
 
 @NgModule({
   declarations: [
     MortgageManagementComponent,
-    SearchComponent,
-    AccountComponent,
     SecurityComponent,
-    ObligorComponent,
-    MmProductsComponent,
+    MmObligorComponent,
+    MmSearchComponent,
+    MmSecurityComponent,
+    MmProductComponent,
   ],
   imports: [
     CommonModule,

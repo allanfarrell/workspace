@@ -8,7 +8,6 @@ import { GuidesComponent } from './modules/support/guides/guides.component';
 import { ReleaseNotesComponent } from './modules/support/release-notes/release-notes.component';
 import { SupportRequestComponent } from './modules/support/support-request/support-request.component';
 import { NotificationsComponent } from './modules/account/notifications/notifications.component';
-import { SearchComponent } from './modules/mortgage-management/search/search.component';
 import { CrmModule } from './modules/crm/crm.module';
 import { UsersComponent } from './modules/crm/organisation/configuration/users/users.component';
 import { IntegrationComponent } from './modules/crm/organisation/configuration/integration/integration.component';
@@ -35,6 +34,7 @@ import { InstTransactionComponent } from './modules/instrument/inst-transaction/
 import { InstSecurityComponent } from './modules/instrument/inst-security/inst-security.component';
 import { InstVariationComponent } from './modules/instrument/inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './modules/instrument/inst-document/inst-document.component';
+import { MmSearchComponent } from './modules/mortgage-management/mm-search/mm-search.component';
 
 export const routes: Routes = [
   { path: "account", component: AccountComponent,
@@ -67,7 +67,7 @@ export const routes: Routes = [
   { path: "mgr", component: MortgageManagementComponent,
     children: [
       { path: '', redirectTo: 'search', pathMatch: 'full' },
-      { path: "search", component: SearchComponent },
+      { path: "search", component: MmSearchComponent },
       { path: "obligor", component: ObligorsComponent },
       { path: "account", component: AccountComponent },
       { path: "security", component: SecurityComponent },

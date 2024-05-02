@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -6,6 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent {
+  @Input() clickable: boolean = false;
   @Input() headers: string[] = [];
   @Input() data: any[] = [];
+  @Output() clickEvent: EventEmitter<any> = new EventEmitter<any>();
+
+  rowClicked(row: any) {
+    this.clickEvent.emit(row);
+  }
 }

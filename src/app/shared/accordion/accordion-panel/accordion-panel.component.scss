@@ -4,18 +4,20 @@
   
   /* accordion-panel.component.css */
   .panel {
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color);
     margin-bottom: 5px;
   }
   
   .panel.active {
-    border: 1px solid #3498db;
+    border: 1px solid var(--primary-color);
   }
   
   .panel-header {
     padding: 10px;
     cursor: pointer;
-    background-color: #f1f1f1;
+    background-color: var(--primary-color);
+    display:flex;
+    flex-direction: row;
   }
   
   .panel-content {

@@ -13,9 +13,13 @@
 </div>
 <div class="card">
     <div class="pad">Accounts</div>
-    <app-table [data]="accounts" [headers]="accHeaders"></app-table>
+    <app-table [data]="accounts" [headers]="accHeaders" [clickable]="true" (clickEvent)="accountClicked($event)"></app-table>
 </div>
 <div class="card">
     <div class="pad">Obligors</div>
     <app-table [data]="obligors" [headers]="oblHeaders"></app-table>
+</div>
+<div class="card">
+    <div class="pad">Securities</div>
+    <app-table [data]="secirities" [headers]="secHeaders"></app-table>
 </div>

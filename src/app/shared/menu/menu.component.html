@@ -1,7 +1,7 @@
 <div class="menu-container">
     <ng-container *ngFor="let group of createMenu()">
         <div
-            [ngClass]="{'active': group.name === selectedMenuItem?.group}"
+            [ngClass]="{'active': group.name === selectedGroup}"
             class="menu-group clickable" 
             (click)="toggleGroup(group.name)" >{{ group.name }}</div>
         <ng-container *ngIf="group.name == selectedGroup">

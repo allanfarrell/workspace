@@ -1,6 +1,8 @@
 <div class="panel" [class.active]="isActive">
   <div class="panel-header" (click)="togglePanel()">
-    <ng-content select="[panel-title]"></ng-content>
+    <span><mat-icon *ngIf="isActive">expand_less</mat-icon></span>
+    <span><mat-icon *ngIf="!isActive">expand_more</mat-icon></span>
+    <span><ng-content select="[panel-title]"></ng-content></span>
   </div>
   <div class="panel-content" *ngIf="isActive">
     <ng-content select="[panel-content]"></ng-content>

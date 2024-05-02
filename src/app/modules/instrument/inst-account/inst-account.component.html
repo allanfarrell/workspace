@@ -1,4 +1,12 @@
 <div class="card">
-    <div class="pad">Accounts</div>
-    <app-table [data]="data" [headers]="headers"></app-table>
+    <div class="card-header pad">Account Name Account Number</div>
+    
+        <app-tabs>
+            <app-tab tabTitle="Transactions">Transactions</app-tab>
+            <app-tab tabTitle="Statements">Statements</app-tab>
+            <app-tab tabTitle="Products">Products</app-tab>
+            <app-tab tabTitle="Features">Features</app-tab>
+            <app-tab tabTitle="Cards">Cards</app-tab>
+            <app-tab tabTitle="Rates">Rates</app-tab>
+        </app-tabs>
 </div>

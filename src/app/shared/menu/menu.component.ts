@@ -26,11 +26,14 @@ export class MenuComponent {
   menuItemClick(item: MenuItem) {
     if(item.name !== this.selectedItem) {
       this.selectedItem = item.name;
+      this.selectedGroup = item.group;
+      this.selectedMenuItem = item;
       this.router.navigate([item.route]);
     }
   }
 
   toggleGroup(groupName: string) {
+    console.log(groupName);
     if(this.selectedGroup == groupName){
       this.selectedGroup = '';
     } else {

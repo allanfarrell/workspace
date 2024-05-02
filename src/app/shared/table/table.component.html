@@ -5,7 +5,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let row of data">
+        <tr *ngFor="let row of data" [class.clickable]="clickable" (click)="rowClicked(row)">
             <td *ngFor="let header of headers">{{ row[header] }}</td>
         </tr>
     </tbody>

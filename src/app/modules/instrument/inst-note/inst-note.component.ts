@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class InstNoteComponent {
   data = [
-    { id: '1', description: 'description description description', created: '01/01/2023' },
-    { id: '2', description: 'description description description', created: '01/01/2023' },
-    { id: '3', description: 'description description description', created: '01/01/2023' }
+    { id: '1', description: 'description description description', user: 'System', created: '01/01/2023' },
+    { id: '2', description: 'description description description', user: 'Bob', created: '01/01/2023' },
+    { id: '3', description: 'description description description', user: 'Roger', created: '01/01/2023' }
   ];
-  headers = [ 'description', 'created' ];
+  headers = [ 'description', 'user', 'created' ];
 }
