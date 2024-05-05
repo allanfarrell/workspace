@@ -8,8 +8,5 @@ import { Component } from '@angular/core';
 export class SystemAdminComponent {
   menu = [
     { group: 'System Admin', name: 'Tenants', route: '/sys/tenants' },
-    { group: 'System Admin', name: 'Modules', route: '/sys/two' },
-    { group: 'System Admin', name: 'Features', route: '/sys/three' },
-    { group: 'System Admin', name: 'Users', route: '/sys/three' }
   ];
 }

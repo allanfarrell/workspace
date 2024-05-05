@@ -11,9 +11,8 @@ export class CrmComponent {
     { group: 'Access', name: 'Users', route: '/org/users' },
     { group: 'Access', name: 'Roles', route: '/org/roles' },
     { group: 'Configuration', name: 'Reference Data', route: '/org/reference' },
-    { group: 'Configuration', name: 'Integration', route: '/org/integration' },
-    { group: 'Integrations', name: 'Email', route: '/org/integration/email' },
-    { group: 'Integrations', name: 'SMS', route: '/org/integration/sms' },
+    { group: 'Configuration', name: 'Email', route: '/org/integration/email' },
+    { group: 'Configuration', name: 'SMS', route: '/org/integration/sms' },
   ];
   menu2 = {
     groups: [

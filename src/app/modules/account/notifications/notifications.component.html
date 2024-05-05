@@ -8,17 +8,14 @@
                     <app-searchbox></app-searchbox>
                 </div>
                 <div class="field-group">
-                    <label>From:</label>
+                    <label>From</label>
                     <input type="date" class="field" />
                 </div>
                 <div class="field-group">
-                    <label>To:</label>
+                    <label>To</label>
                     <input class="field" type="date" />
                 </div>
                 <app-toggle>Read</app-toggle>
-            </div>
-            <div class="pad">
-                <button class="btn btn-std">Read</button>
             </div>
             <div class="pad">
                 <app-table [headers]="headers" [data]="data"></app-table>

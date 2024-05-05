@@ -30,7 +30,6 @@ import { InstrumentComponent } from './modules/instrument/instrument.component';
 import { InstAccountComponent } from './modules/instrument/inst-account/inst-account.component';
 import { AssessmentComponent } from './modules/assessment/assessment.component';
 import { AssessQueueComponent } from './modules/assessment/assess-queue/assess-queue.component';
-import { InstTransactionComponent } from './modules/instrument/inst-transaction/inst-transaction.component';
 import { InstSecurityComponent } from './modules/instrument/inst-security/inst-security.component';
 import { InstVariationComponent } from './modules/instrument/inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './modules/instrument/inst-document/inst-document.component';

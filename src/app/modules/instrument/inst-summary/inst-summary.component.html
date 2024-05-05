@@ -1,25 +1,16 @@
 <div class="card">
-    <div class="pad">Details</div>
-    <div class="row pad">
-        <div class="field-group">
-            <div class="field-label">TBC</div>
-            <input class="field" type="text" placeholder="tbc">
-        </div>
-        <div class="field-group">
-            <div class="field-label">TBC</div>
-            <input class="field" type="text" placeholder="tbc">
-        </div>
-    </div>
+    <div class="card-header pad">Details</div>
+    <app-table [data]="details" [headers]="deetHeaders"></app-table>
 </div>
 <div class="card">
-    <div class="pad">Accounts</div>
+    <div class="card-header pad">Accounts</div>
     <app-table [data]="accounts" [headers]="accHeaders" [clickable]="true" (clickEvent)="accountClicked($event)"></app-table>
 </div>
 <div class="card">
-    <div class="pad">Obligors</div>
+    <div class="card-header pad">Obligors</div>
     <app-table [data]="obligors" [headers]="oblHeaders" [clickable]="true" (clickEvent)="accountClicked($event)"></app-table>
 </div>
 <div class="card">
-    <div class="pad">Securities</div>
+    <div class="card-header pad">Securities</div>
     <app-table [data]="secirities" [headers]="secHeaders" [clickable]="true" (clickEvent)="accountClicked($event)"></app-table>
 </div>

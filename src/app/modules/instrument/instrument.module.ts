@@ -9,7 +9,6 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { RouterLink } from '@angular/router';
 import { InstAccountComponent } from './inst-account/inst-account.component';
 import { InstSecurityComponent } from './inst-security/inst-security.component';
-import { InstTransactionComponent } from './inst-transaction/inst-transaction.component';
 import { InstVariationComponent } from './inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './inst-document/inst-document.component';
 import { InstCommunicationComponent } from './inst-communication/inst-communication.component';
@@ -22,7 +21,6 @@ import { InstCommunicationComponent } from './inst-communication/inst-communicat
     InstSummaryComponent,
     InstAccountComponent,
     InstSecurityComponent,
-    InstTransactionComponent,
     InstVariationComponent,
     InstDocumentComponent,
     InstCommunicationComponent,
