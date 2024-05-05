@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class AssessmentComponent {
   menu = [
     { group: 'Assessment', name: 'Queues', route: '/assessment/queue' },
+    { group: 'Analytics', name: 'Summary', route: '/assessment/queue' },
+    { group: 'Analytics', name: 'Report', route: '/assessment/queue' },
   ];
 }

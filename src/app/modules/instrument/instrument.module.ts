@@ -12,8 +12,7 @@ import { InstSecurityComponent } from './inst-security/inst-security.component';
 import { InstTransactionComponent } from './inst-transaction/inst-transaction.component';
 import { InstVariationComponent } from './inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './inst-document/inst-document.component';
-
-
+import { InstCommunicationComponent } from './inst-communication/inst-communication.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +25,7 @@ import { InstDocumentComponent } from './inst-document/inst-document.component';
     InstTransactionComponent,
     InstVariationComponent,
     InstDocumentComponent,
+    InstCommunicationComponent,
   ],
   imports: [
     CommonModule,

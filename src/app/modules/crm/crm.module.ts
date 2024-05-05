@@ -13,6 +13,8 @@ import { FundersComponent } from './organisation/entities/funders/funders.compon
 import { ObligorsComponent } from './organisation/entities/obligors/obligors.component';
 import { ProductsComponent } from './organisation/entities/products/products.component';
 import { Router, RouterModule } from '@angular/router';
+import { IntSmsComponent } from './organisation/configuration/integration/int-sms/int-sms.component';
+import { IntEmailComponent } from './organisation/configuration/integration/int-email/int-email.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { Router, RouterModule } from '@angular/router';
     UsersComponent,
     FundersComponent,
     ObligorsComponent,
-    ProductsComponent
+    ProductsComponent,
+    IntSmsComponent,
+    IntEmailComponent
   ],
   imports: [
     CommonModule,

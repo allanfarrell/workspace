@@ -15,7 +15,7 @@ export class NavigationComponent {
     { name: 'Mortgage Management', route: '/mgr/search' },
     //{ name: 'Treasury', route: '/account/dashboard' },
     //{ name: 'Securitisation', route: '/account/dashboard' },
-    //{ name: 'System Admin', route: '/org/details' },
+    { name: 'System Admin', route: '/sys/tenants' },
   ];
   constructor(private router: Router) {}
 

@@ -20,6 +20,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { SelectListComponent } from './select-list/select-list.component';
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { MultiSelectComponent } from './multi-select/multi-select.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     BreadcrumbComponent,
     SelectListComponent,
     MenuListComponent,
-    NavigationComponent
+    NavigationComponent,
+    MultiSelectComponent
   ],
   imports: [
     CommonModule,
@@ -59,7 +61,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     TableComponent,
     MenuComponent,
     MenuListComponent,
-    NavigationComponent
+    NavigationComponent,
+    MultiSelectComponent
   ]
 })
 export class SharedModule { }

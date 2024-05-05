@@ -35,6 +35,12 @@ import { InstSecurityComponent } from './modules/instrument/inst-security/inst-s
 import { InstVariationComponent } from './modules/instrument/inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './modules/instrument/inst-document/inst-document.component';
 import { MmSearchComponent } from './modules/mortgage-management/mm-search/mm-search.component';
+import { InstCommunicationComponent } from './modules/instrument/inst-communication/inst-communication.component';
+import { MmTransactionsComponent } from './modules/mortgage-management/mm-transactions/mm-transactions.component';
+import { IntEmailComponent } from './modules/crm/organisation/configuration/integration/int-email/int-email.component';
+import { IntSmsComponent } from './modules/crm/organisation/configuration/integration/int-sms/int-sms.component';
+import { SystemAdminComponent } from './modules/system-admin/system-admin.component';
+import { TenantsComponent } from './modules/system-admin/tenants/tenants.component';
 
 export const routes: Routes = [
   { path: "account", component: AccountComponent,
@@ -54,6 +60,8 @@ export const routes: Routes = [
       { path: "roles", component: RolesComponent },
       { path: "reference", component: ReferenceDataComponent },
       { path: "events", component: EventsComponent },
+      { path: "integration/email", component: IntEmailComponent },
+      { path: "integration/sms", component: IntSmsComponent },
     ]
   },
   { path: "entities", component: CrmComponent,
@@ -71,6 +79,7 @@ export const routes: Routes = [
       { path: "obligor", component: ObligorsComponent },
       { path: "account", component: AccountComponent },
       { path: "security", component: SecurityComponent },
+      { path: "transactions", component: MmTransactionsComponent },
     ]
   },
   { path: "assessment", component: AssessmentComponent,
@@ -87,9 +96,16 @@ export const routes: Routes = [
       { path: "note", component: InstNoteComponent },
       { path: "event", component: InstEventComponent },
       { path: "security", component: InstSecurityComponent },
-      { path: "transaction", component: InstTransactionComponent },
+      { path: "communication", component: InstCommunicationComponent },
       { path: "variation", component: InstVariationComponent },
       { path: "document", component: InstDocumentComponent },
+    ]
+  },
+  {
+    path: 'sys', component: SystemAdminComponent,
+    children: [
+      { path: '', redirectTo: 'tenants', pathMatch: 'full' },
+      { path: 'tenants', component: TenantsComponent }
     ]
   },
   {

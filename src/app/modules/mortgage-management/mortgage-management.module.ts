@@ -10,6 +10,8 @@ import { MmObligorComponent } from './mm-obligor/mm-obligor.component';
 import { MmSearchComponent } from './mm-search/mm-search.component';
 import { MmSecurityComponent } from './mm-security/mm-security.component';
 import { MmProductComponent } from './mm-product/mm-product.component';
+import { MmTransactionsComponent } from './mm-transactions/mm-transactions.component';
+import { MmSummaryComponent } from './mm-summary/mm-summary.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { MmProductComponent } from './mm-product/mm-product.component';
     MmSearchComponent,
     MmSecurityComponent,
     MmProductComponent,
+    MmTransactionsComponent,
+    MmSummaryComponent,
   ],
   imports: [
     CommonModule,

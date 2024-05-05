@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { CrmModule } from './modules/crm/crm.module';
 import { InstrumentModule } from './modules/instrument/instrument.module';
 import { AssessmentModule } from './modules/assessment/assessment.module';
+import { SystemAdminModule } from './modules/system-admin/system-admin.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AssessmentModule } from './modules/assessment/assessment.module';
     SharedModule,
     MatIconModule,
     InstrumentModule,
-    AssessmentModule
+    AssessmentModule,
+    SystemAdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

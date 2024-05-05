@@ -1,0 +1,16 @@
+<div class="multi-select-container">
+    <div class="selected-items">
+      <div class="chip" *ngFor="let item of selectedItems">
+        {{ item }}
+        <span class="close-icon" (click)="removeItem(item)">&times;</span>
+      </div>
+    </div>
+    <input type="text" [(ngModel)]="searchText" placeholder="Search" />
+    <div class="dropdown">
+      <!-- <div class="dropdown-item" *ngFor="let item of items | filter: searchText" (click)="selectItem(item)"> -->
+        <div class="dropdown-item" *ngFor="let item of items" (click)="selectItem(item)">
+        {{ item }}
+      </div>
+    </div>
+  </div>
+  
