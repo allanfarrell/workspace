@@ -15,5 +15,7 @@ export class InstrumentComponent {
     { group: 'Insturment', name: 'Attributes', route: '/instrument/attribute' },
     { group: 'Insturment', name: 'Notes', route: '/instrument/note' },
     { group: 'Insturment', name: 'Events', route: '/instrument/event' },
+    { group: 'Insturment', name: 'Insurance', route: '/instrument/event' },
+    { group: 'Insturment', name: 'Collections', route: '/instrument/event' },
   ];
 }

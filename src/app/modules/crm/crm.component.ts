@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CrmComponent {
   menu = [
-    { group: 'Configuration', name: 'Details', route: '/org/details' },
+    { group: 'Configuration', name: 'Tenant', route: '/org/tenant' },
     { group: 'Configuration', name: 'Reference Data', route: '/org/reference' },
     { group: 'Configuration', name: 'Email', route: '/org/integration/email' },
     { group: 'Configuration', name: 'SMS', route: '/org/integration/sms' },

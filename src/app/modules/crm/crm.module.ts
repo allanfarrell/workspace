@@ -16,6 +16,8 @@ import { Router, RouterModule } from '@angular/router';
 import { IntSmsComponent } from './organisation/configuration/integration/int-sms/int-sms.component';
 import { IntEmailComponent } from './organisation/configuration/integration/int-email/int-email.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { BrandComponent } from './organisation/configuration/brand/brand.component';
+import { TenantComponent } from './organisation/configuration/tenant/tenant.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CoreModule } from 'src/app/core/core.module';
     ObligorsComponent,
     ProductsComponent,
     IntSmsComponent,
-    IntEmailComponent
+    IntEmailComponent,
+    BrandComponent,
+    TenantComponent
   ],
   imports: [
     CommonModule,

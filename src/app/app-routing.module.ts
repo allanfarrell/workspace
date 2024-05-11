@@ -43,6 +43,8 @@ import { TenantsComponent } from './modules/system-admin/tenants/tenants.compone
 import { MmProductComponent } from './modules/mortgage-management/mm-product/mm-product.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { InstAttributesComponent } from './modules/instrument/inst-attributes/inst-attributes.component';
+import { BrandComponent } from './modules/crm/organisation/configuration/brand/brand.component';
+import { TenantComponent } from './modules/crm/organisation/configuration/tenant/tenant.component';
 
 export const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -57,6 +59,7 @@ export const routes: Routes = [
   { path: "org", component: CrmComponent,
     children: [
       { path: '', redirectTo: 'users', pathMatch: 'full' },
+      { path: "tenant", component: TenantComponent },
       { path: "users", component: UsersComponent },
       { path: "integration", component: IntegrationComponent },
       { path: "communication", component:  CommunicationComponent },

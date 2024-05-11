@@ -4,11 +4,11 @@
             <input class="field" type="text" placeholder="username" />
         </div>
         <div class="pad">
-            <input class="field" type="password" placeholder="password" />
+            <input class="field" type="text" placeholder="password" />
         </div>
         <div class="pad">
             <a>Forgot password?</a>
-            <div routerLink="/account/dashboard" class="btn btn-cta">Login</div>
+            <div (click)="login()" class="btn btn-cta">Login</div>
         </div>
     </div>
 </section>
