@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class MortgageManagementComponent {
   menu = [
     { group: 'Mortgage Management', name: 'Search', route: '/mgr/search' },
+    { group: 'Configuration', name: 'Products', route: '/mgr/product' },
+    { group: 'Configuration', name: 'Funders', route: '/mgr/obligor' },
     { group: 'Analytics', name: 'Transactions', route: '/mgr/transactions' },
     { group: 'Analytics', name: 'Exposure', route: '/mgr/exposure' },
     { group: 'Operations', name: 'Rate Change', route: '/mgr/ratechange' },

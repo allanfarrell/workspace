@@ -11,11 +11,14 @@
 .menu-group {
     color: var(--primary-text-color);
     padding: 0.3em 1em;
+    padding-top: 1.5em;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8em;
 
     &.active {
-        background-color: var(--primary-accent-color);
-        color: var(--primary-text-color);
+        
     }
 }
 
@@ -23,8 +26,8 @@
     color: var(--primary-text-color);
     margin-left: 1em;
     padding-left: 0.4em;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
     cursor: pointer;
 
     &:hover {

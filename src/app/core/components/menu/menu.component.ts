@@ -1,10 +1,9 @@
-import { group } from '@angular/animations';
 import { Component, Input } from '@angular/core';
+import { MenuGroup, MenuItem } from '../../service/menu.model';
 import { Router } from '@angular/router';
-import { routes } from 'src/app/app-routing.module';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'ubx-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
@@ -17,9 +16,11 @@ export class MenuComponent {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.preSelectMenuItem(this.router.url);
-    this.selectedGroup = this.selectedMenuItem?.group ?? '';
-    this.selectedItem = this.selectedMenuItem?.name ?? '';
+    const selectedMenuItem = this.preSelectMenuItem(this.router.url);
+    if (selectedMenuItem) {
+      this.selectedGroup = selectedMenuItem.group;
+      this.selectedItem = selectedMenuItem.name;
+    }
     this.menu2 = this.createMenu();
   }
 
@@ -33,7 +34,6 @@ export class MenuComponent {
   }
 
   toggleGroup(groupName: string) {
-    console.log(groupName);
     if(this.selectedGroup == groupName){
       this.selectedGroup = '';
     } else {
@@ -43,6 +43,7 @@ export class MenuComponent {
 
   preSelectMenuItem(currentUrl: string) {
     this.selectedMenuItem = this.menu.find(item => currentUrl.includes(item.route)) || undefined;
+    return this.menu.find(item => currentUrl.includes(item.route));
   }
 
   createMenu(): MenuGroup[] {
@@ -62,15 +63,4 @@ export class MenuComponent {
 
     return menuGroups;
   }
-}
-
-interface MenuItem {
-  name: string;
-  group: string;
-  route: string;
-}
-
-interface MenuGroup {
-  name: string,
-  items: MenuItem[]
 }

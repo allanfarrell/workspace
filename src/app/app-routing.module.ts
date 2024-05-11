@@ -40,8 +40,11 @@ import { IntEmailComponent } from './modules/crm/organisation/configuration/inte
 import { IntSmsComponent } from './modules/crm/organisation/configuration/integration/int-sms/int-sms.component';
 import { SystemAdminComponent } from './modules/system-admin/system-admin.component';
 import { TenantsComponent } from './modules/system-admin/tenants/tenants.component';
+import { MmProductComponent } from './modules/mortgage-management/mm-product/mm-product.component';
+import { LoginComponent } from './modules/auth/login/login.component';
 
 export const routes: Routes = [
+  { path: "login", component: LoginComponent },
   { path: "account", component: AccountComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -75,6 +78,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: "search", component: MmSearchComponent },
+      { path: "product", component: MmProductComponent },
       { path: "obligor", component: ObligorsComponent },
       { path: "account", component: AccountComponent },
       { path: "security", component: SecurityComponent },
@@ -116,7 +120,7 @@ export const routes: Routes = [
       { path: "request", component: SupportRequestComponent },
     ]
   },
-  { path: '', redirectTo: 'account/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
 

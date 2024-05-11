@@ -12,6 +12,7 @@ import { MmSecurityComponent } from './mm-security/mm-security.component';
 import { MmProductComponent } from './mm-product/mm-product.component';
 import { MmTransactionsComponent } from './mm-transactions/mm-transactions.component';
 import { MmSummaryComponent } from './mm-summary/mm-summary.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MmSummaryComponent } from './mm-summary/mm-summary.component';
   ],
   imports: [
     CommonModule,
+    CoreModule,
     SharedModule,
     RouterLink,
     MatIconModule,

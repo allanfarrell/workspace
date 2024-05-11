@@ -1,0 +1,30 @@
+<div class="menu-container">
+    <ng-container *ngFor="let menuItem of menu">
+        <ng-container *ngIf="menuItem.group == ''">
+            <div 
+                class="menu-group clickable" 
+                [routerLink]="menuItem.route">{{ menuItem.name }}
+            </div>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngFor="let menuItem of menu | unique:'group'">
+        <ng-container *ngIf="menuItem.group != ''">
+            <div
+                class="menu-group clickable"
+                (click)="toggleGroup(menuItem.group)"
+                [ngClass]="{'active': menuItem.group == selectedGroup }">{{ menuItem.group }}
+            </div>
+            
+                <div *ngFor="let item of menu | filterbygroup: menuItem.group">
+                    <div
+                        class="menu-item clickable" 
+                        [ngClass]="{'active': item.name == selectedItem }"
+                        (click)="menuItemClick(item)"
+                        [routerLink]="item.route">{{ item.name }}
+                    </div>
+                </div>
+            
+        </ng-container>
+    </ng-container>
+</div>
+  

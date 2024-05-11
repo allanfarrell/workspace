@@ -15,7 +15,6 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionPanelComponent } from './accordion/accordion-panel/accordion-panel.component';
 import { SearchboxComponent } from './searchbox/searchbox.component';
 import { TableComponent } from './table/table.component';
-import { MenuComponent } from './menu/menu.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { SelectListComponent } from './select-list/select-list.component';
 import { MenuListComponent } from './menu-list/menu-list.component';
@@ -32,7 +31,6 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     AccordionPanelComponent,
     SearchboxComponent,
     TableComponent,
-    MenuComponent,
     BreadcrumbComponent,
     SelectListComponent,
     MenuListComponent,
@@ -59,7 +57,6 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     AccordionPanelComponent,
     SearchboxComponent,
     TableComponent,
-    MenuComponent,
     MenuListComponent,
     NavigationComponent,
     MultiSelectComponent

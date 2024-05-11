@@ -12,6 +12,7 @@ import { InstSecurityComponent } from './inst-security/inst-security.component';
 import { InstVariationComponent } from './inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './inst-document/inst-document.component';
 import { InstCommunicationComponent } from './inst-communication/inst-communication.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { InstCommunicationComponent } from './inst-communication/inst-communicat
   ],
   imports: [
     CommonModule,
+    CoreModule,
     SharedModule,
     AppRoutingModule,
     RouterLink

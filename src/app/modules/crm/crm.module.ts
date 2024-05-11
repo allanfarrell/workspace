@@ -15,6 +15,7 @@ import { ProductsComponent } from './organisation/entities/products/products.com
 import { Router, RouterModule } from '@angular/router';
 import { IntSmsComponent } from './organisation/configuration/integration/int-sms/int-sms.component';
 import { IntEmailComponent } from './organisation/configuration/integration/int-email/int-email.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { IntEmailComponent } from './organisation/configuration/integration/int-
   ],
   imports: [
     CommonModule,
+    CoreModule,
     SharedModule,
     RouterModule
   ]

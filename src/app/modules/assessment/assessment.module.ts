@@ -4,6 +4,7 @@ import { AssessmentComponent } from './assessment.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { AssessQueueComponent } from './assess-queue/assess-queue.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 
@@ -14,6 +15,7 @@ import { AssessQueueComponent } from './assess-queue/assess-queue.component';
   ],
   imports: [
     CommonModule,
+    CoreModule,
     SharedModule,
     AppRoutingModule
   ]

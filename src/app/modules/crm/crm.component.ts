@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class CrmComponent {
   menu = [
     { group: 'Configuration', name: 'Details', route: '/org/details' },
-    { group: 'Access', name: 'Users', route: '/org/users' },
-    { group: 'Access', name: 'Roles', route: '/org/roles' },
     { group: 'Configuration', name: 'Reference Data', route: '/org/reference' },
     { group: 'Configuration', name: 'Email', route: '/org/integration/email' },
     { group: 'Configuration', name: 'SMS', route: '/org/integration/sms' },
+    { group: 'Access', name: 'Users', route: '/org/users' },
+    { group: 'Access', name: 'Roles', route: '/org/roles' },
   ];
   menu2 = {
     groups: [
