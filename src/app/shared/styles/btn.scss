@@ -1,18 +1,26 @@
 .btn {
     padding: 0.3em;
     margin-right: 0.2em;
+    align-self: center;
     cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .btn-cta {
-    background-color: lightslategray;
+    background-color: var(--primary-color);
     border-radius: 5px;
-    border: 1px solid lightslategray;
+    border: 1px solid var(--primary-color);
     color: white;
 }
 
 .btn-std {
     background-color: transparent;
     border-radius: 5px;
-    border: 1px solid lightslategray;
+    border: 1px solid var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: underline;
 }

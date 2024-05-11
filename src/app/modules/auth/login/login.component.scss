@@ -1,3 +1,17 @@
 @import url('../../../shared/styles/structure.scss');
 @import url('../../../shared/styles/form.scss');
 @import url('../../../shared/styles/btn.scss');
+
+.login-container {
+    width: 280px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+section {
+    
+}
