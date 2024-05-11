@@ -1,6 +1,7 @@
 .menu-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: var(--primary-color);
     margin: 0px;
     height: 100%;
@@ -37,6 +38,17 @@
     &.active {
         border-left: 3px solid var(--primary-accent-color);
     }
+}
+
+.support-panel {
+    margin: 0.6em;
+    padding: 0.6em 1em;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.line {
+    
 }
 
 .clickable {

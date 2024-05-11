@@ -42,6 +42,7 @@ import { SystemAdminComponent } from './modules/system-admin/system-admin.compon
 import { TenantsComponent } from './modules/system-admin/tenants/tenants.component';
 import { MmProductComponent } from './modules/mortgage-management/mm-product/mm-product.component';
 import { LoginComponent } from './modules/auth/login/login.component';
+import { InstAttributesComponent } from './modules/instrument/inst-attributes/inst-attributes.component';
 
 export const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -100,6 +101,7 @@ export const routes: Routes = [
       { path: "event", component: InstEventComponent },
       { path: "security", component: InstSecurityComponent },
       { path: "communication", component: InstCommunicationComponent },
+      { path: "attribute", component: InstAttributesComponent },
       { path: "variation", component: InstVariationComponent },
       { path: "document", component: InstDocumentComponent },
     ]

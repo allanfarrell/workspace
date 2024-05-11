@@ -13,6 +13,7 @@ import { InstVariationComponent } from './inst-variation/inst-variation.componen
 import { InstDocumentComponent } from './inst-document/inst-document.component';
 import { InstCommunicationComponent } from './inst-communication/inst-communication.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { InstAttributesComponent } from './inst-attributes/inst-attributes.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CoreModule } from 'src/app/core/core.module';
     InstVariationComponent,
     InstDocumentComponent,
     InstCommunicationComponent,
+    InstAttributesComponent,
   ],
   imports: [
     CommonModule,

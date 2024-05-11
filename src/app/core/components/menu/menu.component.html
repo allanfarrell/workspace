@@ -1,30 +1,36 @@
 <div class="menu-container">
-    <ng-container *ngFor="let menuItem of menu">
-        <ng-container *ngIf="menuItem.group == ''">
-            <div 
-                class="menu-group clickable" 
-                [routerLink]="menuItem.route">{{ menuItem.name }}
-            </div>
-        </ng-container>
-    </ng-container>
-    <ng-container *ngFor="let menuItem of menu | unique:'group'">
-        <ng-container *ngIf="menuItem.group != ''">
-            <div
-                class="menu-group clickable"
-                (click)="toggleGroup(menuItem.group)"
-                [ngClass]="{'active': menuItem.group == selectedGroup }">{{ menuItem.group }}
-            </div>
-            
-                <div *ngFor="let item of menu | filterbygroup: menuItem.group">
-                    <div
-                        class="menu-item clickable" 
-                        [ngClass]="{'active': item.name == selectedItem }"
-                        (click)="menuItemClick(item)"
-                        [routerLink]="item.route">{{ item.name }}
-                    </div>
+    <div>
+        <ng-container *ngFor="let menuItem of menu">
+            <ng-container *ngIf="menuItem.group == ''">
+                <div 
+                    class="menu-group clickable" 
+                    [routerLink]="menuItem.route">{{ menuItem.name }}
                 </div>
-            
+            </ng-container>
         </ng-container>
-    </ng-container>
+        <ng-container *ngFor="let menuItem of menu | unique:'group'">
+            <ng-container *ngIf="menuItem.group != ''">
+                <div
+                    class="menu-group"
+                    (click)="toggleGroup(menuItem.group)"
+                    [ngClass]="{'active': menuItem.group == selectedGroup }">{{ menuItem.group }}
+                </div>
+                
+                    <div *ngFor="let item of menu | filterbygroup: menuItem.group">
+                        <div
+                            class="menu-item clickable" 
+                            [ngClass]="{'active': item.name == selectedItem }"
+                            (click)="menuItemClick(item)"
+                            [routerLink]="item.route">{{ item.name }}
+                        </div>
+                    </div>
+            </ng-container>
+        </ng-container>
+    </div>
+    <div class="support-panel">
+        <div class="line">Information</div>
+        <div class="line">v0.1</div>
+        <div class="line"><mat-icon>settings</mat-icon>Support</div>
+    </div>
 </div>
   

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -20,7 +20,8 @@ import { UniquePipe } from './pipe/unique.pipe';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   exports: [
     MenuComponent,

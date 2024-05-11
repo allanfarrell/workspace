@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class InstEventComponent {
   data = [
-    { id: '1', description: 'description description description', created: '01/01/2023' },
-    { id: '2', description: 'description description description', created: '01/01/2023' },
-    { id: '3', description: 'description description description', created: '01/01/2023' }
+    { id: '1', user: 'System', description: 'Attribute SMSF removed.', timestamp: '01/01/2023' },
+    { id: '2', user: 'System', description: 'Email sent to test@user.com.', timestamp: '01/01/2023' },
+    { id: '3', user: 'System', description: 'Rate increased.', timestamp: '01/01/2023' }
   ];
-  headers = [ 'description', 'created' ];
+  headers = [ 'user', 'description', 'timestamp' ];
 }
