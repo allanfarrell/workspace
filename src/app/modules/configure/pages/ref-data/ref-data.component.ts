@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./ref-data.component.scss']
 })
 export class RefDataComponent {
-  tableHeaders: string[] = ['ID', 'Key', 'Value', 'Type'];
+  tableHeaders: string[] = ['ID', 'Key', 'Value', 'EffectiveFrom', 'EffectiveTo'];
   tableData: any[] = [
-    { ID: 1, Key: 'State', Value: 'NSW', Type: 'Type1' },
-    { ID: 2, Key: 'State', Value: 'ACT', Type: 'Type2' },
-    { ID: 3, Key: 'State', Value: 'NT', Type: 'Type3' }
+    { ID: 1, Key: 'State', Value: 'NSW', EffectiveFrom: '01/01/2023', EffectiveTo: '01/02/2023' },
+    { ID: 2, Key: 'State', Value: 'ACT', EffectiveFrom: '01/01/2023', EffectiveTo: '01/02/2023' },
+    { ID: 3, Key: 'State', Value: 'NT', EffectiveFrom: '01/01/2023', EffectiveTo: '' }
   ];
 }
