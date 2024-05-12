@@ -12,6 +12,7 @@ import { CrmModule } from './modules/crm/crm.module';
 import { InstrumentModule } from './modules/instrument/instrument.module';
 import { AssessmentModule } from './modules/assessment/assessment.module';
 import { SystemAdminModule } from './modules/system-admin/system-admin.module';
+import { ConfigureModule } from './modules/configure/configure.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SystemAdminModule } from './modules/system-admin/system-admin.module';
     MatIconModule,
     InstrumentModule,
     AssessmentModule,
-    SystemAdminModule
+    SystemAdminModule,
+    ConfigureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

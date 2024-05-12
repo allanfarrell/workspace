@@ -7,15 +7,17 @@ import { Component } from '@angular/core';
 })
 export class MortgageManagementComponent {
   menu = [
-    { group: 'Mortgage Management', name: 'Search', route: '/mgr/search' },
-    { group: 'Configuration', name: 'Products', route: '/mgr/product' },
-    { group: 'Configuration', name: 'Funders', route: '/mgr/obligor' },
-    { group: 'Analytics', name: 'Transactions', route: '/mgr/transactions' },
-    { group: 'Analytics', name: 'Exposure', route: '/mgr/exposure' },
-    { group: 'Operations', name: 'Rate Change', route: '/mgr/ratechange' },
-    { group: 'Operations', name: 'Notifications', route: '/mgr/notifications' },
-    { group: 'Operations', name: 'Card Transaction Processing', route: '/mgr/ratechange' },
-    { group: 'Operations', name: 'Bank Transfer Processing', route: '/mgr/ratechange' },
-    { group: 'Operations', name: 'Funds Transfers', route: '/mgr/transfers' },
+    { group: 'Mortgage Management', name: 'Search', route: '/fim/search' },
+    { group: 'Configuration', name: 'Products', route: '/fim/product' },
+    { group: 'Configuration', name: 'Funders', route: '/fim/obligor' },
+    { group: 'Schedule', name: 'Transactions', route: '/shd/transactions' },
+    { group: 'Schedule', name: 'Communication', route: '/shd/communication' },
+    { group: 'Report', name: 'Transactions', route: '/fim/transactions' },
+    { group: 'Report', name: 'Exposure', route: '/fim/exposure' },
+    { group: 'Operations', name: 'Rate Change', route: '/fim/ratechange' },
+    { group: 'Operations', name: 'Notifications', route: '/fim/notifications' },
+    { group: 'Operations', name: 'Card Transaction Processing', route: '/fim/ratechange' },
+    { group: 'Operations', name: 'Bank Transfer Processing', route: '/fim/ratechange' },
+    { group: 'Operations', name: 'Funds Transfers', route: '/fim/transfers' },
   ];
 }

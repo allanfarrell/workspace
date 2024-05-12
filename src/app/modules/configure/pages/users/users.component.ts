@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
-
+  headers = ['Name', 'Roles', 'Created'];
+  data = [
+    { Id: 1, Name: 'User One', Roles: 'Plumber', Created: '01/01/2023'},
+  ];
 }

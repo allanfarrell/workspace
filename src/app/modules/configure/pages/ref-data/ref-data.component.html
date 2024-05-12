@@ -1,1 +1,14 @@
-<p>ref-data works!</p>
+<div class="card">
+    <div class="card-header pad">Reference Data</div>
+    <div class="col pad">
+        <div class="filter-container">
+            <div class="row">
+                <app-searchbox>Search...</app-searchbox>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-std">Add</button>
+        </div>
+    </div>
+    <app-table [headers]="tableHeaders" [data]="tableData"></app-table>
+</div>

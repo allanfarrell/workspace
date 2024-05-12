@@ -12,7 +12,7 @@ export class NavigationComponent {
   modules: menuItem[] = [
     //{ name: 'Application', route: '/account/dashboard' },
     { name: 'Assessment', route: '/assessment/queue' },
-    { name: 'Mortgage Management', route: '/mgr/search' },
+    { name: 'Mortgage Management', route: '/fim/search' },
     //{ name: 'Treasury', route: '/account/dashboard' },
     //{ name: 'Securitisation', route: '/account/dashboard' },
     { name: 'System Admin', route: '/sys/tenants' },

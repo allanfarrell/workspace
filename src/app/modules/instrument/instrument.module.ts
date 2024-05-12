@@ -14,6 +14,7 @@ import { InstDocumentComponent } from './inst-document/inst-document.component';
 import { InstCommunicationComponent } from './inst-communication/inst-communication.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { InstAttributesComponent } from './inst-attributes/inst-attributes.component';
+import { InstrumentLayoutComponent } from './pages/instrument-layout/instrument-layout.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { InstAttributesComponent } from './inst-attributes/inst-attributes.compo
     InstDocumentComponent,
     InstCommunicationComponent,
     InstAttributesComponent,
+    InstrumentLayoutComponent,
   ],
   imports: [
     CommonModule,

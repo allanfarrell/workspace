@@ -1,27 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './modules/account/dashboard/dashboard.component';
 import { SupportComponent } from './modules/support/support.component';
-import { SettingsComponent } from './modules/account/settings/settings.component';
-import { AccountComponent } from './modules/account/account.component';
 import { GuidesComponent } from './modules/support/guides/guides.component';
 import { ReleaseNotesComponent } from './modules/support/release-notes/release-notes.component';
 import { SupportRequestComponent } from './modules/support/support-request/support-request.component';
-import { NotificationsComponent } from './modules/account/notifications/notifications.component';
 import { CrmModule } from './modules/crm/crm.module';
-import { UsersComponent } from './modules/crm/organisation/configuration/users/users.component';
 import { IntegrationComponent } from './modules/crm/organisation/configuration/integration/integration.component';
-import { CommunicationComponent } from './modules/crm/organisation/audit/communication/communication.component';
-import { RolesComponent } from './modules/crm/organisation/configuration/roles/roles.component';
-import { ReferenceDataComponent } from './modules/crm/organisation/configuration/reference-data/reference-data.component';
-import { EventsComponent } from './modules/crm/organisation/audit/events/events.component';
 import { CrmComponent } from './modules/crm/crm.component';
 import { FundersComponent } from './modules/crm/organisation/entities/funders/funders.component';
 import { ObligorsComponent } from './modules/crm/organisation/entities/obligors/obligors.component';
 import { ProductsComponent } from './modules/crm/organisation/entities/products/products.component';
 import { MortgageManagementComponent } from './modules/mortgage-management/mortgage-management.component';
 import { SecurityComponent } from './modules/mortgage-management/security/security.component';
-
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
 import { InstSummaryComponent } from './modules/instrument/inst-summary/inst-summary.component';
 import { InstNoteComponent } from './modules/instrument/inst-note/inst-note.component';
@@ -36,19 +26,28 @@ import { InstDocumentComponent } from './modules/instrument/inst-document/inst-d
 import { MmSearchComponent } from './modules/mortgage-management/mm-search/mm-search.component';
 import { InstCommunicationComponent } from './modules/instrument/inst-communication/inst-communication.component';
 import { MmTransactionsComponent } from './modules/mortgage-management/mm-transactions/mm-transactions.component';
-import { IntEmailComponent } from './modules/crm/organisation/configuration/integration/int-email/int-email.component';
-import { IntSmsComponent } from './modules/crm/organisation/configuration/integration/int-sms/int-sms.component';
 import { SystemAdminComponent } from './modules/system-admin/system-admin.component';
 import { TenantsComponent } from './modules/system-admin/tenants/tenants.component';
 import { MmProductComponent } from './modules/mortgage-management/mm-product/mm-product.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { InstAttributesComponent } from './modules/instrument/inst-attributes/inst-attributes.component';
-import { BrandComponent } from './modules/crm/organisation/configuration/brand/brand.component';
 import { TenantComponent } from './modules/crm/organisation/configuration/tenant/tenant.component';
+import { ConfigureComponent } from './modules/configure/pages/configure/configure.component';
+import { RolesComponent } from './modules/configure/pages/roles/roles.component';
+import { TokenComponent } from './modules/configure/pages/token/token.component';
+import { BrandComponent } from './modules/configure/pages/brand/brand.component';
+import { UsersComponent } from './modules/configure/pages/users/users.component';
+import { EmailComponent } from './modules/configure/pages/email/email.component';
+import { SmsComponent } from './modules/configure/pages/sms/sms.component';
+import { RefDataComponent } from './modules/configure/pages/ref-data/ref-data.component';
+import { SettingsComponent } from './modules/account/pages/settings/settings.component';
+import { NotificationsComponent } from './modules/account/pages/notifications/notifications.component';
+import { DashboardComponent } from './modules/account/pages/dashboard/dashboard.component';
+import { AccountLayoutComponent } from './modules/account/pages/account-layout/account-layout.component';
 
 export const routes: Routes = [
   { path: "login", component: LoginComponent },
-  { path: "account", component: AccountComponent,
+  { path: "account", component: AccountLayoutComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: "dashboard", component: DashboardComponent },
@@ -60,14 +59,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'users', pathMatch: 'full' },
       { path: "tenant", component: TenantComponent },
-      { path: "users", component: UsersComponent },
       { path: "integration", component: IntegrationComponent },
-      { path: "communication", component:  CommunicationComponent },
-      { path: "roles", component: RolesComponent },
-      { path: "reference", component: ReferenceDataComponent },
-      { path: "events", component: EventsComponent },
-      { path: "integration/email", component: IntEmailComponent },
-      { path: "integration/sms", component: IntSmsComponent },
     ]
   },
   { path: "entities", component: CrmComponent,
@@ -78,13 +70,13 @@ export const routes: Routes = [
       { path: "products", component: ProductsComponent },
     ]
   },
-  { path: "mgr", component: MortgageManagementComponent,
+  { path: "fim", component: MortgageManagementComponent,
     children: [
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: "search", component: MmSearchComponent },
       { path: "product", component: MmProductComponent },
       { path: "obligor", component: ObligorsComponent },
-      { path: "account", component: AccountComponent },
+      
       { path: "security", component: SecurityComponent },
       { path: "transactions", component: MmTransactionsComponent },
     ]
@@ -123,6 +115,19 @@ export const routes: Routes = [
       { path: "guides", component: GuidesComponent },
       { path: "release", component: ReleaseNotesComponent },
       { path: "request", component: SupportRequestComponent },
+    ]
+  },
+  {
+    path: 'config', component: ConfigureComponent,
+    children: [
+      { path: '', redirectTo: 'brand', pathMatch: 'full' },
+      { path: 'brand', component: BrandComponent },
+      { path: "user", component: UsersComponent },
+      { path: "role", component: RolesComponent },
+      { path: "token", component: TokenComponent },
+      { path: "email", component: EmailComponent },
+      { path: "sms", component: SmsComponent },
+      { path: "reference", component: RefDataComponent },
     ]
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
