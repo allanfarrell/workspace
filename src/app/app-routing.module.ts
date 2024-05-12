@@ -10,8 +10,6 @@ import { CrmComponent } from './modules/crm/crm.component';
 import { FundersComponent } from './modules/crm/organisation/entities/funders/funders.component';
 import { ObligorsComponent } from './modules/crm/organisation/entities/obligors/obligors.component';
 import { ProductsComponent } from './modules/crm/organisation/entities/products/products.component';
-import { MortgageManagementComponent } from './modules/mortgage-management/mortgage-management.component';
-import { SecurityComponent } from './modules/mortgage-management/security/security.component';
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
 import { InstSummaryComponent } from './modules/instrument/inst-summary/inst-summary.component';
 import { InstNoteComponent } from './modules/instrument/inst-note/inst-note.component';
@@ -23,12 +21,12 @@ import { AssessQueueComponent } from './modules/assessment/assess-queue/assess-q
 import { InstSecurityComponent } from './modules/instrument/inst-security/inst-security.component';
 import { InstVariationComponent } from './modules/instrument/inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './modules/instrument/inst-document/inst-document.component';
-import { MmSearchComponent } from './modules/mortgage-management/mm-search/mm-search.component';
+import { MmSearchComponent } from './modules/mortgage-management/pages/mm-search/mm-search.component';
 import { InstCommunicationComponent } from './modules/instrument/inst-communication/inst-communication.component';
-import { MmTransactionsComponent } from './modules/mortgage-management/mm-transactions/mm-transactions.component';
+import { MmTransactionsComponent } from './modules/mortgage-management/pages/mm-transactions/mm-transactions.component';
 import { SystemAdminComponent } from './modules/system-admin/system-admin.component';
 import { TenantsComponent } from './modules/system-admin/tenants/tenants.component';
-import { MmProductComponent } from './modules/mortgage-management/mm-product/mm-product.component';
+import { MmProductComponent } from './modules/mortgage-management/pages/mm-product/mm-product.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { InstAttributesComponent } from './modules/instrument/inst-attributes/inst-attributes.component';
 import { TenantComponent } from './modules/crm/organisation/configuration/tenant/tenant.component';
@@ -44,6 +42,7 @@ import { SettingsComponent } from './modules/account/pages/settings/settings.com
 import { NotificationsComponent } from './modules/account/pages/notifications/notifications.component';
 import { DashboardComponent } from './modules/account/pages/dashboard/dashboard.component';
 import { AccountLayoutComponent } from './modules/account/pages/account-layout/account-layout.component';
+import { MmLayoutComponent } from './modules/mortgage-management/pages/mm-layout/mm-layout.component';
 
 export const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -70,17 +69,16 @@ export const routes: Routes = [
       { path: "products", component: ProductsComponent },
     ]
   },
-  { path: "manage", component: MortgageManagementComponent,
+  { path: "manage", component: MmLayoutComponent,
     children: [
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: "search", component: MmSearchComponent },
       { path: "product", component: MmProductComponent },
       { path: "obligor", component: ObligorsComponent },
-      { path: "security", component: SecurityComponent },
       { path: "transactions", component: MmTransactionsComponent },
     ]
   },
-  { path: "shd", component: MortgageManagementComponent,
+  { path: "shd", component: MmLayoutComponent,
     children: [
       { path: '', redirectTo: 'transactions', pathMatch: 'full' },
       { path: "transactions", component: MmTransactionsComponent },

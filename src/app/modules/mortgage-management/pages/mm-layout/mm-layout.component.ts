@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-mortgage-management',
-  templateUrl: './mortgage-management.component.html',
-  styleUrls: ['./mortgage-management.component.scss']
+  selector: 'app-mm-layout',
+  templateUrl: './mm-layout.component.html',
+  styleUrls: ['./mm-layout.component.scss']
 })
-export class MortgageManagementComponent {
+export class MmLayoutComponent {
   menu = [
     { group: 'Mortgage Management', name: 'Search', route: '/manage/search' },
     { group: 'Configuration', name: 'Products', route: '/manage/product' },

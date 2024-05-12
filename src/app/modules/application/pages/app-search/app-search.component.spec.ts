@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SecurityComponent } from './security.component';
+import { AppSearchComponent } from './app-search.component';
 
-describe('SecurityComponent', () => {
-  let component: SecurityComponent;
-  let fixture: ComponentFixture<SecurityComponent>;
+describe('AppSearchComponent', () => {
+  let component: AppSearchComponent;
+  let fixture: ComponentFixture<AppSearchComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SecurityComponent]
+      declarations: [AppSearchComponent]
     });
-    fixture = TestBed.createComponent(SecurityComponent);
+    fixture = TestBed.createComponent(AppSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
