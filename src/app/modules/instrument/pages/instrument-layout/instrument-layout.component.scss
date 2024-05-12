@@ -1,0 +1,14 @@
+@import url('../../../../shared/styles/structure.scss');
+@import url('../../../../shared/styles/card.scss');
+
+
+:host {
+    padding: 1em;
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}

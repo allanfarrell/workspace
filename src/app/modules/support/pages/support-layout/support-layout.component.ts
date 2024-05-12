@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-support',
-  templateUrl: './support.component.html',
-  styleUrls: ['./support.component.scss']
+  selector: 'app-support-layout',
+  templateUrl: './support-layout.component.html',
+  styleUrls: ['./support-layout.component.scss']
 })
-export class SupportComponent {
+export class SupportLayoutComponent {
   menu = [
     { group: 'Support', name: 'Request', route: '/support/request' },
     { group: 'Support', name: 'Guides', route: '/support/guides' },
