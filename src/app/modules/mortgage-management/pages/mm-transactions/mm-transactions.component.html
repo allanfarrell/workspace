@@ -1,4 +1,8 @@
 <div class="card">
     <div class="card-header pad">Transactions</div>
-    <div>Contents</div>
+    <select>
+        <option>Scheduled</option>
+        <option>Schedule</option>
+    </select>
+    <app-table [data]="data" [headers]="headers"></app-table>
 </div>
