@@ -70,15 +70,21 @@ export const routes: Routes = [
       { path: "products", component: ProductsComponent },
     ]
   },
-  { path: "fim", component: MortgageManagementComponent,
+  { path: "manage", component: MortgageManagementComponent,
     children: [
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: "search", component: MmSearchComponent },
       { path: "product", component: MmProductComponent },
       { path: "obligor", component: ObligorsComponent },
-      
       { path: "security", component: SecurityComponent },
       { path: "transactions", component: MmTransactionsComponent },
+    ]
+  },
+  { path: "shd", component: MortgageManagementComponent,
+    children: [
+      { path: '', redirectTo: 'transactions', pathMatch: 'full' },
+      { path: "transactions", component: MmTransactionsComponent },
+      { path: "communication", component: MmTransactionsComponent },
     ]
   },
   { path: "assessment", component: AssessmentComponent,

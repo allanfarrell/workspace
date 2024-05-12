@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class InstrumentComponent {
   menu = [
-    { group: '', name: 'Back', route: '/fim/search' },
+    { group: '', name: 'Back', route: '/manage/search' },
     { group: 'Insturment', name: 'Summary', route: '/instrument/summary' },
     { group: 'Insturment', name: 'Variations', route: '/instrument/variation' },
     { group: 'Insturment', name: 'Documents', route: '/instrument/document' },
