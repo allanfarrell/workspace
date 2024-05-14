@@ -10,7 +10,7 @@ import { menuItem } from '../menu-list/menu-list.component';
 export class NavigationComponent {
   menuName: string = 'Module';
   modules: menuItem[] = [
-    //{ name: 'Application', route: '/account/dashboard' },
+    { name: 'Application', route: '/application/search' },
     { name: 'Assessment', route: '/assessment/queue' },
     { name: 'Mortgage Management', route: '/manage/search' },
     //{ name: 'Treasury', route: '/account/dashboard' },

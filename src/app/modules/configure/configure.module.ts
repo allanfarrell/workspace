@@ -11,6 +11,8 @@ import { EmailComponent } from './pages/email/email.component';
 import { SmsComponent } from './pages/sms/sms.component';
 import { RolesComponent } from './pages/roles/roles.component';
 import { TokenComponent } from './pages/token/token.component';
+import { AssociateComponent } from './pages/associate/associate.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TokenComponent } from './pages/token/token.component';
     EmailComponent,
     SmsComponent,
     RolesComponent,
-    TokenComponent
+    TokenComponent,
+    AssociateComponent,
+    DetailsComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +37,13 @@ import { TokenComponent } from './pages/token/token.component';
     ConfigureComponent,
     BrandComponent,
     UsersComponent,
-    RefDataComponent
+    RefDataComponent,
+    EmailComponent,
+    SmsComponent,
+    RolesComponent,
+    TokenComponent,
+    AssociateComponent,
+    DetailsComponent
   ]
 })
 export class ConfigureModule { }

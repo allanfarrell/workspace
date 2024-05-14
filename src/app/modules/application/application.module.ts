@@ -5,8 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ApplicationLayoutComponent } from './pages/application-layout/application-layout.component';
 import { AppSearchComponent } from './pages/app-search/app-search.component';
-
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,12 @@ import { AppSearchComponent } from './pages/app-search/app-search.component';
     CommonModule,
     CoreModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
+  ],
+  exports: [
+    ApplicationLayoutComponent,
+    AppSearchComponent
   ]
 })
 export class ApplicationModule { }

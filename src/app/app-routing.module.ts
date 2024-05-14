@@ -3,12 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { GuidesComponent } from './modules/support/pages/guides/guides.component';
 import { ReleaseNotesComponent } from './modules/support/pages/release-notes/release-notes.component';
 import { SupportRequestComponent } from './modules/support/pages/support-request/support-request.component';
-import { CrmModule } from './modules/crm/crm.module';
-import { IntegrationComponent } from './modules/crm/organisation/configuration/integration/integration.component';
-import { CrmComponent } from './modules/crm/crm.component';
-import { FundersComponent } from './modules/crm/organisation/entities/funders/funders.component';
-import { ObligorsComponent } from './modules/crm/organisation/entities/obligors/obligors.component';
-import { ProductsComponent } from './modules/crm/organisation/entities/products/products.component';
 import { NotFoundComponent } from './core/pages/not-found/not-found.component';
 import { InstSummaryComponent } from './modules/instrument/pages/inst-summary/inst-summary.component';
 import { InstNoteComponent } from './modules/instrument/pages/inst-note/inst-note.component';
@@ -27,7 +21,6 @@ import { TenantsComponent } from './modules/system-admin/tenants/tenants.compone
 import { MmProductComponent } from './modules/mortgage-management/pages/mm-product/mm-product.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { InstAttributesComponent } from './modules/instrument/pages/inst-attributes/inst-attributes.component';
-import { TenantComponent } from './modules/crm/organisation/configuration/tenant/tenant.component';
 import { ConfigureComponent } from './modules/configure/pages/configure/configure.component';
 import { RolesComponent } from './modules/configure/pages/roles/roles.component';
 import { TokenComponent } from './modules/configure/pages/token/token.component';
@@ -43,6 +36,10 @@ import { AccountLayoutComponent } from './modules/account/pages/account-layout/a
 import { MmLayoutComponent } from './modules/mortgage-management/pages/mm-layout/mm-layout.component';
 import { SupportLayoutComponent } from './modules/support/pages/support-layout/support-layout.component';
 import { InstrumentLayoutComponent } from './modules/instrument/pages/instrument-layout/instrument-layout.component';
+import { AssociateComponent } from './modules/configure/pages/associate/associate.component';
+import { DetailsComponent } from './modules/configure/pages/details/details.component';
+import { ApplicationLayoutComponent } from './modules/application/pages/application-layout/application-layout.component';
+import { AppSearchComponent } from './modules/application/pages/app-search/app-search.component';
 
 export const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -54,27 +51,17 @@ export const routes: Routes = [
       { path: "notifications", component: NotificationsComponent },
     ]
   },
-  { path: "org", component: CrmComponent,
-    children: [
-      { path: '', redirectTo: 'users', pathMatch: 'full' },
-      { path: "tenant", component: TenantComponent },
-      { path: "integration", component: IntegrationComponent },
-    ]
-  },
-  { path: "entities", component: CrmComponent,
-    children: [
-      { path: '', redirectTo: 'funders', pathMatch: 'full' },
-      { path: "funders", component: FundersComponent },
-      { path: "obligors", component: ObligorsComponent },
-      { path: "products", component: ProductsComponent },
-    ]
-  },
+  { path: "application", component: ApplicationLayoutComponent,
+  children: [
+    { path: '', redirectTo: 'search', pathMatch: 'full' },
+    { path: "search", component: AppSearchComponent },
+  ]
+},
   { path: "manage", component: MmLayoutComponent,
     children: [
       { path: '', redirectTo: 'search', pathMatch: 'full' },
       { path: "search", component: MmSearchComponent },
       { path: "product", component: MmProductComponent },
-      { path: "obligor", component: ObligorsComponent },
       { path: "transactions", component: MmTransactionsComponent },
     ]
   },
@@ -125,6 +112,8 @@ export const routes: Routes = [
     path: 'config', component: ConfigureComponent,
     children: [
       { path: '', redirectTo: 'brand', pathMatch: 'full' },
+      { path: 'associate', component: AssociateComponent },
+      { path: 'detail', component: DetailsComponent },
       { path: 'brand', component: BrandComponent },
       { path: "user", component: UsersComponent },
       { path: "role", component: RolesComponent },

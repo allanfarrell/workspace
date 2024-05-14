@@ -8,11 +8,11 @@ import { AccountModule } from './modules/account/account.module';
 import { SupportModule } from './modules/support/support.module';
 import { MortgageManagementModule } from './modules/mortgage-management/mortgage-management.module';
 import { CoreModule } from './core/core.module';
-import { CrmModule } from './modules/crm/crm.module';
 import { InstrumentModule } from './modules/instrument/instrument.module';
 import { AssessmentModule } from './modules/assessment/assessment.module';
 import { SystemAdminModule } from './modules/system-admin/system-admin.module';
 import { ConfigureModule } from './modules/configure/configure.module';
+import { ApplicationModule } from './modules/application/application.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,6 @@ import { ConfigureModule } from './modules/configure/configure.module';
     BrowserModule,
     AppRoutingModule,
     AccountModule,
-    CrmModule,
     MortgageManagementModule,
     SupportModule,
     SharedModule,
@@ -31,7 +30,8 @@ import { ConfigureModule } from './modules/configure/configure.module';
     InstrumentModule,
     AssessmentModule,
     SystemAdminModule,
-    ConfigureModule
+    ConfigureModule,
+    ApplicationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
