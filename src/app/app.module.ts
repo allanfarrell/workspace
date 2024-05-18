@@ -13,6 +13,7 @@ import { AssessmentModule } from './modules/assessment/assessment.module';
 import { SystemAdminModule } from './modules/system-admin/system-admin.module';
 import { ConfigureModule } from './modules/configure/configure.module';
 import { ApplicationModule } from './modules/application/application.module';
+import { TreasuryModule } from './modules/treasury/treasury.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ApplicationModule } from './modules/application/application.module';
     AssessmentModule,
     SystemAdminModule,
     ConfigureModule,
-    ApplicationModule
+    ApplicationModule,
+    TreasuryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

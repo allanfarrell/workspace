@@ -2,12 +2,22 @@
     <div class="card-header pad">Account</div>
     <div class="pad">
         <div class="field-group">
-            <label>Name</label>
+            <label>First Name</label>
+            <input class="field" placeholder="name" type="text" disabled/>
+        </div>
+        <div class="field-group">
+            <label>Last name</label>
             <input class="field" placeholder="name" type="text" disabled/>
         </div>
         <div class="field-group">
             <label>Email</label>
             <input class="field" placeholder="email" type="email" disabled/>
+        </div>
+        <div class="field-group">
+            <label>Status</label>
+            <div>
+                <app-toggle>Active</app-toggle>
+            </div>
         </div>
     </div>
 </div>
@@ -60,7 +70,7 @@
     </div>
 </div>
 <div class="card">
-    <div class="card-header pad">Permissions</div>
+    <div class="card-header pad">Roles and Permissions</div>
     <div class="pad">
         <div class="">Assessment Module</div>
         <div>Permission 1</div>

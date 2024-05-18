@@ -40,6 +40,8 @@ import { AssociateComponent } from './modules/configure/pages/associate/associat
 import { DetailsComponent } from './modules/configure/pages/details/details.component';
 import { ApplicationLayoutComponent } from './modules/application/pages/application-layout/application-layout.component';
 import { AppSearchComponent } from './modules/application/pages/app-search/app-search.component';
+import { TreasuryLayoutComponent } from './modules/treasury/page/treasury-layout/treasury-layout.component';
+import { PortfolioComponent } from './modules/treasury/page/portfolio/portfolio.component';
 
 export const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -63,6 +65,12 @@ export const routes: Routes = [
       { path: "search", component: MmSearchComponent },
       { path: "product", component: MmProductComponent },
       { path: "transactions", component: MmTransactionsComponent },
+    ]
+  },
+  { path: "treasury", component: TreasuryLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+      { path: "portfolio", component: PortfolioComponent },
     ]
   },
   { path: "shd", component: MmLayoutComponent,

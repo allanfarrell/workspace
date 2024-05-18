@@ -8,14 +8,12 @@ import { menuItem } from '../menu-list/menu-list.component';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  menuName: string = 'Module';
+  menuName: string = 'Modules';
   modules: menuItem[] = [
     { name: 'Application', route: '/application/search' },
     { name: 'Assessment', route: '/assessment/queue' },
-    { name: 'Mortgage Management', route: '/manage/search' },
-    //{ name: 'Treasury', route: '/account/dashboard' },
-    //{ name: 'Securitisation', route: '/account/dashboard' },
-    { name: 'System Admin', route: '/sys/tenants' },
+    { name: 'Management', route: '/manage/search' },
+    { name: 'Treasury', route: '/treasury/portfolio' },
   ];
   constructor(private router: Router) {}
 
