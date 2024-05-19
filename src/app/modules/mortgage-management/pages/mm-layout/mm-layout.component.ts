@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 export class MmLayoutComponent {
   menu = [
-    { group: 'Mortgage Management', name: 'Search', route: '/manage/search' },
+    { group: 'Management', name: 'Search', route: '/manage/search' },
     { group: 'Configuration', name: 'Products', route: '/manage/product' },
-    { group: 'Configuration', name: 'Funders', route: '/manage/obligor' },
     { group: 'Schedule', name: 'Transactions', route: '/shd/transactions' },
     { group: 'Schedule', name: 'Communication', route: '/shd/communication' },
     { group: 'Report', name: 'Transactions', route: '/manage/transactions' },

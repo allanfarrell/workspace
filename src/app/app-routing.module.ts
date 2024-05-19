@@ -9,7 +9,7 @@ import { InstNoteComponent } from './modules/instrument/pages/inst-note/inst-not
 import { InstEventComponent } from './modules/instrument/pages/inst-event/inst-event.component';
 import { InstAccountComponent } from './modules/instrument/pages/inst-account/inst-account.component';
 import { AssessmentComponent } from './modules/assessment/assessment.component';
-import { AssessQueueComponent } from './modules/assessment/assess-queue/assess-queue.component';
+import { AssessQueueComponent } from './modules/assessment/page/assess-queue/assess-queue.component';
 import { InstSecurityComponent } from './modules/instrument/pages/inst-security/inst-security.component';
 import { InstVariationComponent } from './modules/instrument/pages/inst-variation/inst-variation.component';
 import { InstDocumentComponent } from './modules/instrument/pages/inst-document/inst-document.component';
@@ -42,6 +42,7 @@ import { ApplicationLayoutComponent } from './modules/application/pages/applicat
 import { AppSearchComponent } from './modules/application/pages/app-search/app-search.component';
 import { TreasuryLayoutComponent } from './modules/treasury/page/treasury-layout/treasury-layout.component';
 import { PortfolioComponent } from './modules/treasury/page/portfolio/portfolio.component';
+import { AssSummaryComponent } from './modules/assessment/page/ass-summary/ass-summary.component';
 
 export const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -84,6 +85,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'queue', pathMatch: 'full' },
       { path: "queue", component: AssessQueueComponent },
+      { path: "summary", component: AssSummaryComponent },
     ]
   },
   { path: "instrument", component: InstrumentLayoutComponent,
